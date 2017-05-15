@@ -12,7 +12,8 @@
     address: "6001 W 3rd St, Los Angeles, CA 90036",
     description: "Be there.",
     host_id: 2,
-    city_id: 3
+    city_id: 3,
+    max_attend: 5
 
   },... ],
   attending: {
@@ -22,7 +23,8 @@
       address: "550 S Reseda Blvd, Los Angeles, CA 90036",
       description: "Be here."
       host_id: 5,
-      city_id: 8
+      city_id: 8,
+      max_attend: 7
     },... ]
       }
     }
