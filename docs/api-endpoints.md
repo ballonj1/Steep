@@ -34,4 +34,4 @@
 - `GET /api/hosts/`
 - `POST /api/hosts/`
 - `PATCH /api/hosts/:id`
-- `DELETE /api/hosts/:id
+- `DELETE /api/hosts/:id`
