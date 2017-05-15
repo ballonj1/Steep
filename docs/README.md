@@ -4,7 +4,7 @@
 
 [Trello Link][trello]
 
-[heroku]: https://www.heroku.com/
+[heroku]: https://teawithdanger.herokuapp.com/
 [trello]: https://trello.com/
 
 ## Minimum Viable Product
