@@ -51,7 +51,7 @@ sufficient CSS styling:
 
 ### Phase 4: Host/Join Events (1 days)
 
-**Objective:** Allow users to host and join events. Users will be able to join events through after selecting a city.  Available meetup times will be displayed and the user can select those that work for them. Users will also be able to host events.
+**Objective:** Allow users to host and join events. Users will be able to join events after selecting a city.  Available meetup times will be displayed and the user can select those that work for them. Users will also be able to host events.
 
 ### Phase 5: Dashboard of joined events/hosted events(2 day)
 
