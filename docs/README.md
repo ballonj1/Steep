@@ -37,27 +37,23 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (2 day)
+### Phase 1: Backend setup and Front End User Authentication (Login and Sign Up Forms) (2 day)
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Login and Sign Up Forms (2 day)
+### Phase 2: Host/Join Events (3 days)
 
-**Objective:** Create forms that allow users to create new accounts and login.
+**Objective:** Allow users to host and join events. Users will be able to join events after selecting a city.  Available meetup times will be displayed and the user can select those that work for them. Users will also be able to host events.
 
 ### Phase 3: Choose City (1 day)
 
 **Objective:** Allow users to choose the city they would like to meetup in.  Link to each of these cities and show the available meetup times.
 
-### Phase 4: Host/Join Events (1 days)
-
-**Objective:** Allow users to host and join events. Users will be able to join events after selecting a city.  Available meetup times will be displayed and the user can select those that work for them. Users will also be able to host events.
-
-### Phase 5: Dashboard of joined events/hosted events(2 day)
+### Phase 4: Dashboard of joined events/hosted events(2 day)
 
 **Objective:** Joined/Hosted events will manageable from a Dashboard.
 
-### Phase 6: - Styling
+### Throughout: - Styling/Seeding
 
 **Objective:** Add avatars, seed data, and clean up the html/css.
 
