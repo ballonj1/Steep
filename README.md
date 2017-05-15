@@ -1,4 +1,4 @@
-# Slouch
+# TeaWithDanger
 
 [TeaWithDanger][heroku]
 
@@ -37,19 +37,19 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (1 day)
+### Phase 1: Backend setup and Front End User Authentication (2 day)
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Login and Sign Up Forms (1 day)
+### Phase 2: Login and Sign Up Forms (2 day)
 
 **Objective:** Create forms that allow users to create new accounts and login.
 
-### Phase 3: Choose City (2 day)
+### Phase 3: Choose City (1 day)
 
 **Objective:** Allow users to choose the city they would like to meetup in.  Link to each of these cities and show the available meetup times.
 
-### Phase 4: Host/Join Events (3 days)
+### Phase 4: Host/Join Events (1 days)
 
 **Objective:** Allow users to host and join events. Users will be able to join events through after selecting a city.  Available meetup times will be displayed and the user can select those that work for them. Users will also be able to host events.
 
