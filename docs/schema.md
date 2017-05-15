@@ -21,6 +21,7 @@ address     | string    | not null
 description | string    | not null
 host_id     | integer   | not null, indexed
 city_id     | integer   | not null, indexed
+max_attend  | integer   | not null
 
 ## cities
 column name | data type | details
