@@ -19,8 +19,8 @@ date        | string    | not null
 time        | string    | not null
 address     | string    | not null
 description | string    | not null
-host_id     | integer   | not null
-city_id     | integer   | not null
+host_id     | integer   | not null, indexed
+city_id     | integer   | not null, indexed
 
 ## cities
 column name | data type | details
