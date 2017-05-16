@@ -27,7 +27,7 @@ max_attend  | integer   | not null
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | integer   | not null
+name        | string    | not null
 image_url   | string    | not null
 
 ## hosts
@@ -35,7 +35,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 description | string    | not null
-user_id     | integer   | not null, indexed
+user_id     | integer   | not null, indexed, unique
 
 ## joined_events
 column name | data type | details
