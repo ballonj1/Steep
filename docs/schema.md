@@ -36,3 +36,10 @@ column name | data type | details
 id          | integer   | not null, primary key
 description | string    | not null
 user_id     | integer   | not null, indexed
+
+## joined_events
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, indexed
+event_id    | integer   | not null, indexed
