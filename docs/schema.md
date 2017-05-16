@@ -35,7 +35,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 description | string    | not null
-user_id     | integer   | not null, indexed
+user_id     | integer   | not null, indexed, unique
 
 ## joined_events
 column name | data type | details
