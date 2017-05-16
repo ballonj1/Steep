@@ -9,9 +9,9 @@
 ## JSON API
 
 ### Users
-
+- `GET /api/users/:id`
 - `POST /api/users`
-- `PATCH /api/users/id`
+- `PATCH /api/users/:id`
 
 ### Session
 
