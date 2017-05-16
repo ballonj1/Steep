@@ -2,7 +2,7 @@
 {
   currentUser: {
     id: 1,
-    username: "user1",
+    first_name: "Adam",
     email: "email1@gmail.com" 
   },
   events: {

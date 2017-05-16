@@ -7,7 +7,7 @@ id              | integer   | not null, primary key
 first_name      | string    | not null
 last_name       | string    | not null
 email           | string    | not null, indexed, unique
-city_id         | integer   | not null, indexed
+city_id         | integer   | 
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
 
@@ -37,7 +37,7 @@ id          | integer   | not null, primary key
 description | string    | not null
 user_id     | integer   | not null, indexed, unique
 
-## joined_events
+## joins
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
