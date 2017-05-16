@@ -1,0 +1,3 @@
+class Join < ApplicationRecord
+  
+end

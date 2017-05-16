@@ -44,12 +44,12 @@ ActiveRecord::Schema.define(version: 20170516043756) do
     t.index ["user_id"], name: "index_hosts_on_user_id", unique: true, using: :btree
   end
 
-  create_table "joined_events", force: :cascade do |t|
+  create_table "joins", force: :cascade do |t|
     t.integer  "user_id",    null: false
     t.integer  "event_id",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "event_id"], name: "index_joined_events_on_user_id_and_event_id", unique: true, using: :btree
+    t.index ["user_id", "event_id"], name: "index_joins_on_user_id_and_event_id", unique: true, using: :btree
   end
 
   create_table "users", force: :cascade do |t|
