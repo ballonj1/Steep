@@ -27,7 +27,7 @@ max_attend  | integer   | not null
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-name        | integer   | not null
+name        | string    | not null
 image_url   | string    | not null
 
 ## hosts
