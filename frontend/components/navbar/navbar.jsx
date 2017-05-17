@@ -1,13 +1,18 @@
 import React from 'react';
-import { NavLink, Route } from 'react-router-dom';
+import { NavLink, Route, Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 
 const signedInNav = (signOut, signedIn) => {
   if (signedIn) {
     return (
-      <nav>
-        <button onClick={signOut}>Sign Out</button>
-      </nav>
+      <header className="main-nav">
+        <nav className="left-nav">
+          <Link to="/"><img className="logo" src="assets/logo-navbar.png" alt="TWD" /></Link>
+        </nav>
+        <nav className="right-nav">
+          <button className="sign-out" onClick={signOut}>Sign Out</button>
+        </nav>
+      </header>
     )
   }
 }
@@ -15,10 +20,15 @@ const signedInNav = (signOut, signedIn) => {
 const signedOutNav = (signedIn) => {
   if (!signedIn) {
     return (
-      <nav>
-        <NavLink to="/signIn">Sign In</NavLink>
-        <NavLink to="/signUp">Sign Up</NavLink>
-      </nav>
+      <header className="main-nav">
+        <nav className="left-nav">
+            <Link to="/"><img src="../../../app/images/logo-navbar.png" alt="TWD" /></Link>
+        </nav>
+        <nav className="right-nav">
+          <NavLink to="/signIn">Sign In</NavLink>
+          <NavLink to="/signUp">Sign Up</NavLink>
+        </nav>
+      </header>
     )
   }
 }

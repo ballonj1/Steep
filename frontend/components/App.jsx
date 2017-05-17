@@ -13,9 +13,10 @@ const App = () => (
       <h1>Tea With Danger</h1>
       <GreetingContainer />
     </header>
-
-    <AuthRoute path="/signIn" component={SessionFormContainer} />
-    <AuthRoute path="/signUp" component={signUpFormContainer} />
+    <div className="main-content">
+      <AuthRoute path="/signIn" component={SessionFormContainer} />
+      <AuthRoute path="/signUp" component={signUpFormContainer} />
+    </div>
   </div>
 )
 
