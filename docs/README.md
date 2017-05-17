@@ -15,7 +15,7 @@ following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
 
 - [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
+- [ ] New account creation, signIn, and guest/demo signIn
 - [ ] A production README
 - [ ] Choose City
 - [ ] Host Events
@@ -37,7 +37,7 @@ sufficient CSS styling:
 
 ## Implementation Timeline
 
-### Phase 1: Backend setup and Front End User Authentication (Login and Sign Up Forms) (2 day)
+### Phase 1: Backend setup and Front End User Authentication (signIn and Sign Up Forms) (2 day)
 
 **Objective:** Functioning rails project with front-end Authentication
 

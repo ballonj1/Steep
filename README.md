@@ -15,7 +15,7 @@ following criteria with smooth, bug-free navigation, adequate seed data and
 sufficient CSS styling:
 
 - [ ] Hosting on Heroku
-- [ ] New account creation, login, and guest/demo login
+- [ ] New account creation, signIn, and guest/demo signIn
 - [ ] A production README
 - [ ] Choose City
 - [ ] Host Events
@@ -41,9 +41,9 @@ sufficient CSS styling:
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Login and Sign Up Forms (2 day)
+### Phase 2: signIn and Sign Up Forms (2 day)
 
-**Objective:** Create forms that allow users to create new accounts and login.
+**Objective:** Create forms that allow users to create new accounts and signIn.
 
 ### Phase 3: Choose City (1 day)
 

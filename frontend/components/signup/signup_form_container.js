@@ -1,15 +1,15 @@
 import { connect } from 'react-redux';
-import { signup } from '../../actions/session_actions';
-import SignupForm from './signup_form';
+import { signUp } from '../../actions/session_actions';
+import signUpForm from './signUp_form';
 
 const mapStateToProps = ({ session }) => ({
-    loggedIn: Boolean(session.currentUser),
+    signedIn: Boolean(session.currentUser),
     errors: session.errors
 });
 
 const mapDispatchToProps = (dispatch, { location }) => {
   const formType = location.pathname.slice(1);
-  const processForm = signup;
+  const processForm = signUp;
 
   return {
     processForm: user => dispatch(processForm(user)),
@@ -20,4 +20,4 @@ const mapDispatchToProps = (dispatch, { location }) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignupForm);
+)(signUpForm);

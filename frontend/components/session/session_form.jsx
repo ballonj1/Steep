@@ -9,11 +9,11 @@ class SessionForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demoLogin = this.demoLogin.bind(this);
+    this.demosignIn = this.demosignIn.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
+    if (nextProps.signedIn) {
       this.props.history.push('/');
     }
   }
@@ -30,17 +30,17 @@ class SessionForm extends React.Component {
     this.props.processForm({user});
   }
 
-  demoLogin(e) {
+  demosignIn(e) {
     e.preventDefault();
     const user = {user: {email: "email@gmail.com", password: "password"}}
-    this.props.login(user);
+    this.props.signIn(user);
   }
 
   navLink(){
-    if (this.props.formType === 'login') {
-      return <Link to="/signup">sign up instead</Link>
+    if (this.props.formType === 'signIn') {
+      return <Link to="/signUp">sign up instead</Link>
     } else {
-      return <Link to="/login">log in instead</Link>
+      return <Link to="/signIn">log in instead</Link>
     }
   }
 
@@ -58,31 +58,31 @@ class SessionForm extends React.Component {
 
   render() {
     return(
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="signIn-form-container">
+        <form onSubmit={this.handleSubmit} className="signIn-form-box">
           Welcome to TeaWithDanger
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
-          <div className="login-form">
+          <div className="signIn-form">
             <br/>
             <label>Email:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="signIn-input"
               />
             </label>
             <label>Password:
-              <input type="text"
+              <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signIn-input"
               />
             </label>
             <br/>
             <input type="submit" value="Submit" />
-            <button onClick={this.demoLogin}>Guest Login</button>
+            <button onClick={this.demosignIn}>Guest signIn</button>
           </div>
         </form>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-class SignupForm extends React.Component {
+class signUpForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,7 +14,7 @@ class SignupForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.loggedIn) {
+    if (nextProps.signedIn) {
       this.props.history.push('/');
     }
   }
@@ -32,7 +32,7 @@ class SignupForm extends React.Component {
   }
 
   navLink(){
-    return <Link to="/login">log in instead</Link>
+    return <Link to="/signIn">log in instead</Link>
   }
 
   renderErrors(){
@@ -49,40 +49,40 @@ class SignupForm extends React.Component {
 
   render() {
     return(
-      <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
+      <div className="signUp-form-container">
+        <form onSubmit={this.handleSubmit} className="signUp-form-box">
           Welcome to TeaWithDanger
           <br/>
           Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
-          <div className="signup-form">
+          <div className="signUp-form">
             <br/>
             <label>First Name:
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
-                className="signup-input"
+                className="signUp-input"
               />
             </label>
             <label>Last Name:
               <input type="text"
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
-                className="signup-input"
+                className="signUp-input"
               />
             </label>
             <label>Email:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signup-input"
+                className="signUp-input"
               />
             </label>
             <label>Password:
-              <input type="text"
+              <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-input"
+                className="signUp-input"
               />
             </label>
             <br/>
@@ -94,4 +94,4 @@ class SignupForm extends React.Component {
   }
 }
 
-export default withRouter(SignupForm);
+export default withRouter(signUpForm);
