@@ -1,16 +1,22 @@
 import React from 'react';
 import { NavLink, Route, Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
+
 
 const signedInNav = (signOut, signedIn) => {
   if (signedIn) {
     return (
       <header className="main-nav">
         <nav className="left-nav">
-          <Link className="logo-container" to="/"><img className="logo" src="assets/logo-navbar.png" alt="TWD" /></Link>
+          <div className="left-nav-content">
+            <Link className="logo-container" to="/"><img className="logo" src="assets/logo-navbar.png" alt="TWD" /></Link>
+          </div>
         </nav>
         <nav className="right-nav">
-          <button className="nav-routes" onClick={signOut}>SIGN OUT</button>
+          <div className="right-nav-contents">
+
+            <button className="nav-emphasis nav-routes" onClick={signOut}>SIGN OUT</button>
+
+          </div>
         </nav>
       </header>
     )
@@ -22,14 +28,16 @@ const signedOutNav = (signedIn) => {
     return (
       <header className="main-nav">
         <nav className="left-nav">
+          <div className="left-nav-content">
             <Link to="/"><img src="assets/logo-navbar.png" alt="TWD" /></Link>
+          </div>
         </nav>
         <nav className="right-nav">
-          <div>
-            <NavLink className="nav-routes" to="/signIn">SIGN IN</NavLink>
-          </div>
-          <div className="sign-up-style">
-            <NavLink className="sign-up-nav-text nav-routes" to="/signUp">SIGN UP</NavLink>
+          <div className="right-nav-contents">
+            <div>
+              <NavLink className="nav-routes" to="/signIn">SIGN IN</NavLink>
+            </div>
+            <NavLink className="nav-emphasis nav-routes" to="/signUp">SIGN UP</NavLink>
           </div>
         </nav>
       </header>
