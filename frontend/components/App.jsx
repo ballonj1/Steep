@@ -1,6 +1,6 @@
 import React from 'react';
 import SessionFormContainer from './session/session_form_container'
-import signUpFormContainer from './signup/sign_up_form_container'
+import signUpFormContainer from './signup/signup_form_container'
 import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
