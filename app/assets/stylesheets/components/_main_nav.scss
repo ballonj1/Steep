@@ -12,11 +12,6 @@ img {
   height: auto;
 }
 
-a {
-  color: white;
-  margin: 0 10px 0 10px;
-}
-
 .right-nav {
   flex: 1;
   display: flex;
@@ -44,4 +39,20 @@ h2 {
   font-size: 0.8em;
   letter-spacing: 1px;
   font-weight: 600;
+  color: white;
+  margin: 0 10px 0 10px;
+}
+
+.sign-up-style {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.sign-up-nav-text {
+  color: #F7C661;
+}
+
+.sign-up-style:hover {
+  color: red;
 }

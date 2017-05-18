@@ -57,7 +57,6 @@ class signUpForm extends React.Component {
           <br/>
           {this.renderErrors()}
           <div className="sign-up-form">
-            <br/>
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}

@@ -10,7 +10,7 @@ const signedInNav = (signOut, signedIn) => {
           <Link className="logo-container" to="/"><img className="logo" src="assets/logo-navbar.png" alt="TWD" /></Link>
         </nav>
         <nav className="right-nav">
-          <button className="sign-out" onClick={signOut}>Sign Out</button>
+          <button className="nav-routes" onClick={signOut}>SIGN OUT</button>
         </nav>
       </header>
     )
@@ -25,8 +25,12 @@ const signedOutNav = (signedIn) => {
             <Link to="/"><img src="assets/logo-navbar.png" alt="TWD" /></Link>
         </nav>
         <nav className="right-nav">
-          <NavLink className="nav-routes" to="/signIn">SIGN IN</NavLink>
-          <NavLink className="nav-routes" to="/signUp">SIGN UP</NavLink>
+          <div>
+            <NavLink className="nav-routes" to="/signIn">SIGN IN</NavLink>
+          </div>
+          <div className="sign-up-style">
+            <NavLink className="sign-up-nav-text nav-routes" to="/signUp">SIGN UP</NavLink>
+          </div>
         </nav>
       </header>
     )
