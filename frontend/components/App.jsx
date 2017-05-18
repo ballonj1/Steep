@@ -5,6 +5,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import Footer from './footer/footer';
+import CitiesContainer from './'
 
 const App = () => (
   <div>
@@ -12,6 +13,7 @@ const App = () => (
       <NavbarContainer />
     </header>
     <div className="main-content">
+      <Route path="/hosting" component={CitiesContainer} />
       <AuthRoute path="/signIn" component={SessionFormContainer} />
       <AuthRoute path="/signUp" component={signUpFormContainer} />
     </div>
