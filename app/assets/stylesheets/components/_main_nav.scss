@@ -1,9 +1,47 @@
 .main-nav {
   display: flex;
   background: #F7C661;
-  justify-content: space-around;
   align-items: center;
   font-family: Arial;
   font-size: 18px;
   height: 75px;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+a {
+  color: white;
+  margin: 0 10px 0 10px;
+}
+
+.right-nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.left-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: #EF6236;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.nav-routes {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
