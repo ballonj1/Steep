@@ -22,7 +22,7 @@ const signedOutNav = (signedIn) => {
     return (
       <header className="main-nav">
         <nav className="left-nav">
-            <Link to="/"><img src="../../../app/images/logo-navbar.png" alt="TWD" /></Link>
+            <Link to="/"><img src="assets/logo-navbar.png" alt="TWD" /></Link>
         </nav>
         <nav className="right-nav">
           <NavLink to="/signIn">Sign In</NavLink>

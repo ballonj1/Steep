@@ -51,42 +51,39 @@ class signUpForm extends React.Component {
     return(
       <div className="sign-up-form-container">
         <form onSubmit={this.handleSubmit} className="sign-up-form-box">
-          Welcome to TeaWithDanger
+          <h2>Join for tea time</h2>
+          <p className="sign-up-text">Thousands of strangers across the world have sat
+              together for conversations. We can't wait for you to join them.</p>
           <br/>
-          Please {this.props.formType} or {this.navLink()}
           {this.renderErrors()}
-          <div className="signUp-form">
+          <div className="sign-up-form">
             <br/>
-            <label>First Name:
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
-                className="signUp-input"
+                className="sign-up-box"
+                placeholder="First Name"
               />
-            </label>
-            <label>Last Name:
               <input type="text"
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
-                className="signUp-input"
+                className="sign-up-box"
+                placeholder="Last Name"
               />
-            </label>
-            <label>Email:
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signUp-input"
+                className="sign-up-box"
+                placeholder="Email"
               />
-            </label>
-            <label>Password:
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signUp-input"
+                className="sign-up-box"
+                placeholder="Password"
               />
-            </label>
             <br/>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="LET'S GET DANGEROUS" />
           </div>
         </form>
       </div>
