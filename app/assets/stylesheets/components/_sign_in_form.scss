@@ -36,6 +36,11 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   color: white;
+  position: relative;
+}
+
+input[type="submit"]:active {
+  top: 2px;
 }
 
 h2 {
@@ -56,5 +61,10 @@ h2 {
   display: flex;
   justify-content: center;
   color: white;
-  margin-top: 4px;
+  margin-top: 6px;
+  position: relative;
+}
+
+.guest-button:active {
+  top: 2px;
 }

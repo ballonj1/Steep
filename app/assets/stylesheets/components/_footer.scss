@@ -17,15 +17,22 @@
   align-items: center;
 }
 
+.nav-routes:hover {
+  color: #EF6236;
+}
+
+
 .brief-about {
   display: flex;
   flex-direction: column;
   flex: 2;
+  border: 1px solid white;
 }
+
 
 .footer-p {
   color: white;
-  margin: 0 0 0.8125em;
+  margin: 0.8125em;
 }
 
 .brief-about {
