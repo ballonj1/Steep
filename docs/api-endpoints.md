@@ -25,7 +25,7 @@
 - `DELETE /api/events/:id`
 
 ### Cities
-
+- `POST /api/cities`
 - `GET /api/cities/`
 - `GET /api/cities/:id`
 
