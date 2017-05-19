@@ -28,4 +28,4 @@ export const signUp = (user) => (dispatch) => (
 export const signOut = () => (dispatch) => (
   APIUtil.signOut()
     .then((signedOutUser) => dispatch(receiveCurrentUser(null)))
-)
+);

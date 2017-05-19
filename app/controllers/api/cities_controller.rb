@@ -9,12 +9,12 @@ class Api::CitiesController < ApplicationController
   end
 
   def index
-    @cities = Cities.all
+    @cities = City.all
     render :index
   end
 
   def show
-    @city = City.find_by(:id)
+    @city = City.find_by(id: params[:id])
     if @city
       render :show
     else

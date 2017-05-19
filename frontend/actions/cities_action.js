@@ -19,12 +19,18 @@ export const receiveErrors = (errors) => ({
   errors
 })
 
-export const fetchCity = (id) => (dispatch) => {
+export const fetchCity = (id) => (dispatch) => (
   APIUtil.fetchCity(id)
     .then((city) => dispatch(receiveCity(city)),
           (errors) => dispatch(receiveErrors(errors.responseJSON)))
-}
+)
 
-export const fetchCities = () => (dispatch) => {
-  
-}
+export const fetchCities = () => (dispatch) => (
+  APIUtil.fetchCities()
+    .then((cities) => {
+      console.log(cities)
+
+      return dispatch(receiveCities(cities))
+    },
+        (errors) => dispatch(receiveCities(errors.responseJSON)))
+)
