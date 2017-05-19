@@ -29,7 +29,7 @@ const signedOutNav = (signedIn) => {
       <header className="main-nav">
         <nav className="left-nav">
           <div className="left-nav-content">
-            <Link to="/"><img src="assets/logo-navbar.png" alt="TWD" /></Link>
+            <Link to="/"><img src="http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495171568/logo-navbar_vkrcks.png" alt="TWD" /></Link>
           </div>
         </nav>
         <nav className="right-nav">
