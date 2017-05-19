@@ -7,7 +7,8 @@ const mapStateToProps = ({ cities }) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  allCities: () => dispatch(fetchCities())
+  fetchCities: () => dispatch(fetchCities())
+  fetchCity: (id) => dispatch(fetchCities())
 }
 
 export default connect(
