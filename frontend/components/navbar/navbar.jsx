@@ -8,7 +8,7 @@ const signedInNav = (signOut, signedIn) => {
       <header className="main-nav">
         <nav className="left-nav">
           <div className="left-nav-content">
-            <Link className="logo-container" to="/"><img className="logo" src="assets/logo-navbar.png" alt="TWD" /></Link>
+            <Link className="logo-container" to="/"><img className="logo" src="http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495171568/logo-navbar_vkrcks.png" alt="TWD" /></Link>
           </div>
         </nav>
         <nav className="right-nav">
