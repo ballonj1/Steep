@@ -5,7 +5,7 @@ import { Route } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import Footer from './footer/footer';
-import citiesContainer from './cities/cities_container';
+import citiesIndexContainer from './cities/cities_index_container';
 
 const App = () => (
   <div>
@@ -16,7 +16,7 @@ const App = () => (
 
       <AuthRoute path="/signIn" component={sessionFormContainer} />
       <AuthRoute path="/signUp" component={signUpFormContainer} />
-      <Route path="/cities" component={citiesContainer} />
+      <Route path="/cities" component={citiesIndexContainer} />
     </div>
     <div className="footer">
       <Footer />

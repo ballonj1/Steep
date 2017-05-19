@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchCities } from '../../actions/cities_action';
-import Cities from './cities';
+import CitiesIndex from './cities_index';
 
 const mapStateToProps = ({ cities }) => ({
   cities
@@ -14,4 +14,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Cities)
+)(CitiesIndex)
