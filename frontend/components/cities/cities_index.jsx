@@ -7,9 +7,7 @@ class CitiesIndex extends React.Component {
   }
 
   componentDidMount(){
-    debugger
     this.props.fetchCities();
-    debugger;
   }
 
   render(){
@@ -17,19 +15,27 @@ class CitiesIndex extends React.Component {
 
     return(
       <div className="cities-container">
-        <div className="cities-header">
+        <div className="cities-header-1">
+          <h1>Set your home city</h1>
+          <p>Make sure you're the first to her about Tea with Danger updates relevant to you.</p>
+        </div>
+        <div className="cities-header-2">
+          <h2 className="cities-purpose">We're building our communities here.</h2>
+          <p>You should sign up for tea time today!</p>
         </div>
         <div className="cities-list">
           {cities.map((city, idx) => {
             return (
               <div key={idx} className="city-image-container">
                 <Link to={`/cities/${city.id}`}><img className="city-image" src={city.image_url} alt={city.name}/></Link>
+                <h2 className="city-image-name">{city.name}</h2>
               </div>
             )
           })}
         </div>
-        <Link to="/cities/add">Add a City</Link>
+
       </div>
+
     )
   }
 }
