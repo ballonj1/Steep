@@ -15,6 +15,6 @@ export const receiveErrors = (errors) => ({
 
 export const fetchEvents = (city_id) => (dispatch) => (
   APIUtil.fetchEvents(city_id)
-          .then((events) => dispatch(receiveEvents(events)),
+  .then((events) => dispatch(receiveEvents(events)),
                 (errors) => dispatch(receiveErrors(errors)))
 )

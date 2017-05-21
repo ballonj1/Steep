@@ -1,4 +1,3 @@
-import merge from 'lodash/merge';
 import { RECEIVE_CITIES, RECEIVE_CITY, RECEIVE_ERRORS } from '../actions/cities_action';
 
 
