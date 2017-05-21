@@ -5,8 +5,9 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_many :joined_events
+  has_many :joins
   has_many :hosts
+  has_many :events, through: :joins
 
   after_initialize :ensure_session_token
 

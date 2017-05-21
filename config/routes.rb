@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :events, only: [:index, :create, :destroy]
     resources :cities, only: [:index, :show, :create]
     resources :hosts, only: [:index, :create, :update, :destroy]
+    resources :joins, only: [:create, :destroy, :index, :show]
   end
 end
