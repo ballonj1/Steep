@@ -1,11 +1,12 @@
 import React from 'react';
 import sessionFormContainer from './session/session_form_container'
 import signUpFormContainer from './signup/signup_form_container'
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import NavbarContainer from './navbar/navbar_container';
 import Footer from './footer/footer';
-import citiesIndexContainer from './cities/cities_index_container';
+import CitiesIndexContainer from './cities/cities_index_container';
+import CitiesDetailContainer from './cities/cities_detail_container';
 
 const App = () => (
   <div>
@@ -13,10 +14,10 @@ const App = () => (
       <NavbarContainer />
     </header>
     <div className="main-content">
-
       <AuthRoute path="/signIn" component={sessionFormContainer} />
       <AuthRoute path="/signUp" component={signUpFormContainer} />
-      <Route path="/cities" component={citiesIndexContainer} />
+      <Route exact path="/cities" component={CitiesIndexContainer} />
+      <Route exact path="/cities/:id" component={CitiesDetailContainer} />
     </div>
     <div className="footer">
       <Footer />

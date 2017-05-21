@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import CitiesIndexItem from './cities_index_item';
+
 class CitiesIndex extends React.Component {
   constructor(props){
     super(props)
@@ -24,16 +26,12 @@ class CitiesIndex extends React.Component {
           <p>You should sign up for tea time today!</p>
         </div>
         <div className="cities-list">
-          {cities.map((city, idx) => {
+          {cities.map((city) => {
             return (
-              <div key={idx} className="city-image-container">
-                <Link to={`/cities/${city.id}`}><img className="city-image" src={city.image_url} alt={city.name}/></Link>
-                <h2 className="city-image-name">{city.name}</h2>
-              </div>
+              <CitiesIndexItem key={city.id} city={city} />
             )
           })}
         </div>
-
       </div>
 
     )

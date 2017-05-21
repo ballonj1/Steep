@@ -28,7 +28,6 @@ export const fetchCity = (id) => (dispatch) => (
 export const fetchCities = () => (dispatch) => (
   APIUtil.fetchCities()
     .then((cities) => {
-      console.log(cities)
 
       return dispatch(receiveCities(cities))
     },
