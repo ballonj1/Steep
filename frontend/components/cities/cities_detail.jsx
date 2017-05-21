@@ -1,20 +1,20 @@
 import React from 'react';
 
 class CitiesDetail extends React.Component {
-  constructor(props){
-    super(props)
-  }
-
-  componentDidMount() {
-    this.props.fetchCity(parseInt(this.props.match.params.id))
+componentDidMount() {
+    if (this.props.cities.length < 1) {
+      this.props.fetchCity(parseInt(this.props.match.params.id))
+    }
   }
 
   render(){
     const { cities } = this.props;
-    console.log(cities)
+    const city = cities.filter((city) => {
+      return city.id === parseInt(this.props.match.params.id);
+    });
     return(
       <div>
-        <p>Out here.</p>
+        <p></p>
       </div>
     )
   }

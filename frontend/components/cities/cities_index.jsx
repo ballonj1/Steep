@@ -14,7 +14,6 @@ class CitiesIndex extends React.Component {
 
   render(){
     const { cities } = this.props
-
     return(
       <div className="cities-container">
         <div className="cities-header-1">

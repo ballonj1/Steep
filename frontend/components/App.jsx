@@ -16,8 +16,10 @@ const App = () => (
     <div className="main-content">
       <AuthRoute path="/signIn" component={sessionFormContainer} />
       <AuthRoute path="/signUp" component={signUpFormContainer} />
-      <Route exact path="/cities" component={CitiesIndexContainer} />
-      <Route exact path="/cities/:id" component={CitiesDetailContainer} />
+      <Switch>
+        <Route path="/cities/:id" component={CitiesDetailContainer} />
+        <Route path="/cities" component={CitiesIndexContainer} />
+      </Switch>
     </div>
     <div className="footer">
       <Footer />

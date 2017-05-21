@@ -7,7 +7,9 @@ const citiesReducer = (state = [], action) => {
     case RECEIVE_CITIES:
       return action.cities
     case RECEIVE_CITY:
-      return action.city
+      return [
+        action.city
+      ]
     default:
       return state;
   }
