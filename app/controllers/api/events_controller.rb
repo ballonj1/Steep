@@ -10,11 +10,13 @@ class Api::EventsController < ApplicationController
 
   def index
     @city = City.find_by(id: params[:city_id])
-    @events = @city.events
-    if @events
-      render :index
-    else
-      render json: @city.errors.full_messages, status: 422
+    if @city
+      @events = @city.events
+      if @events
+        render :index
+      else
+        render json: @city.errors.full_messages, status: 422
+      end
     end
   end
 
