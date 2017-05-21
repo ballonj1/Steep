@@ -1,7 +1,8 @@
 import React from 'react';
+import EventContainer from '../event_show/event_container';
 
 class CitiesDetail extends React.Component {
-componentDidMount() {
+  componentDidMount() {
     if (this.props.cities.length < 1) {
       this.props.fetchCity(parseInt(this.props.match.params.id))
     }
@@ -14,7 +15,7 @@ componentDidMount() {
     });
     return(
       <div>
-        <p></p>
+        <EventContainer />
       </div>
     )
   }
