@@ -9,7 +9,12 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @events = Event.find_by(city_id: params[:city_id])
+    if @events
+      render :index
+    else
+      render json: @events.errors.full_messages, status: 422
+    end
   end
 
   def delete
@@ -19,6 +24,6 @@ class Api::EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:date, :time, :address, :description, :max_attend, :host_id, :user_id)
+    params.require(:event).permit(:date, :time, :address, :description, :host_id, :user_id, :max_attend)
   end
 end

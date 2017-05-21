@@ -6,7 +6,9 @@ Rails.application.routes.draw do
     resources :users, only: [:show, :create, :update]
     resource :session, only: [:create, :destroy]
     resources :events, only: [:index, :create, :destroy]
-    resources :cities, only: [:index, :show, :create]
+    resources :cities, only: [:index, :show, :create] do
+      resources :events, only: [:index, :create, :destroy]
+    end
     resources :hosts, only: [:index, :create, :update, :destroy]
     resources :joins, only: [:create, :destroy, :index, :show]
   end

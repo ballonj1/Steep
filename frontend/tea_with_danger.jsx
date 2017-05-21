@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
+window.fetchEvents = fetchEvents;
 window.fetchCity = fetchCity;
 window.fetchCities = fetchCities;

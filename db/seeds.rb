@@ -30,3 +30,12 @@ City.create(name: "Tokyo", image_url: "http://res.cloudinary.com/dzbwfwz4j/image
 City.create(name: "Oslo", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495301816/oslo_uebdio.jpg")
 City.create(name: "San Francisco", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495172076/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco_egcxtn.jpg")
 City.create(name: "New York", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495172034/5104226627001_5244714388001_5205235439001-vs_ywumkw.jpg")
+
+
+Event.destroy_all
+
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
