@@ -14,7 +14,7 @@ class EventIndex extends React.Component {
   render(){
     const { events, city } = this.props
     return(
-      <div>
+      <div className="event-detail-container">
         <ul>
           {events.map((event, idx) => {
             return(

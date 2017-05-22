@@ -6,8 +6,11 @@ class EventDetail extends React.Component {
     const { event } = this.props
 
     return(
-      <div>
+      <div className="event-container">
         <p>{event.description}</p>
+        <p>{event.address}</p>
+        <p>{event.time}</p>
+        <p>{event.date}</p>
       </div>
     )
   }

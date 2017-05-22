@@ -1,5 +1,5 @@
 .city-detail-container {
-  background-color: red;
+  background-color: #FAF6E8;
 }
 
 .hero-image{
@@ -10,4 +10,10 @@
 .hero-image-container {
   max-height: 650px;
   overflow: hidden;
+}
+
+.city-detail-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
