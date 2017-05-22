@@ -1,10 +1,12 @@
 import { connect } from 'react-redux';
 import EventDetail from './event_detail';
 import { joinEvent, leaveEvent } from '../../actions/join_actions';
+import { currentUserJoins } from '../../reducers/selectors';
 
-const mapStateToProps = ({ session }, { event }) => ({
+const mapStateToProps = ({ session, joins }, { event }) => ({
   session,
-  event
+  event,
+  joins: currentUserJoins(joins, session)
 });
 
 const mapDispatchToProps = (dispatch) => ({

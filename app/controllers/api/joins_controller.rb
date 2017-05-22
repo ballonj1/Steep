@@ -15,7 +15,8 @@ class Api::JoinsController < ApplicationController
   end
 
   def index
-    @user = User.find_by(id: params[:id])
+    debugger
+    @user = User.find_by(id: params[:user_id])
     @joins = @user.joins
     if @joins.length > 0
       render :index

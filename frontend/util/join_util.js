@@ -12,3 +12,10 @@ export const leaveEvent = (joined_event_id) => (
     url: `/api/joins/${joined_event_id}`,
   })
 );
+
+export const fetchJoins = (user_id) => (
+  $.ajax({
+    method: 'GET',
+    url: `/api/users/${user_id}/joins`,
+  })
+)
