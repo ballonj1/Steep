@@ -12,10 +12,15 @@ class EventIndex extends React.Component {
   }
 
   render(){
+    const { events } = this.props
     return(
       <div>
         <ul>
-          
+          {events.map((event, idx) => {
+            return(
+              <li key={idx}><EventDetailContainer key={idx} event={event} /></li>
+            )
+          })}
         </ul>
       </div>
     )

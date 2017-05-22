@@ -1,10 +1,13 @@
 import React from 'react';
 
 class EventDetail extends React.Component {
+
   render(){
+    const { event } = this.props
+    debugger
     return(
       <div>
-        <p>event detail</p>
+        <p>{event.description}</p>
       </div>
     )
   }

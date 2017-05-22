@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import EventDetail from './event_detail';
 import { joinEvent, leaveEvent } from '../../actions/join_actions';
 
-const mapStateToProps = ({ session }, event) => ({
+const mapStateToProps = ({ session }, { event }) => ({
   session,
   event
 });
