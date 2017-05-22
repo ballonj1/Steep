@@ -23,10 +23,10 @@ export const joinEvent = (user_id, event_id) => (dispatch) => (
   APIUtil.joinEvent(user_id, event_id).then((join) => dispatch(receiveJoin(join)))
 )
 
-export const leaveEvent = (joined_event_id) => (dispatch) => (
-  APIUtil.leaveEvent(joined_event_id).then((join) => dispatch(removeJoin(join)))
+export const leaveEvent = (user_id, joined_event_id) => (dispatch) => (
+  APIUtil.leaveEvent(user_id, joined_event_id).then((join) => dispatch(removeJoin(join)))
 )
 
-export const fetchJoins = (user_id) => (dispatch) => {
+export const fetchJoins = (user_id) => (dispatch) => (
   APIUtil.fetchJoins(user_id).then((joins) => dispatch(receiveJoins(joins)))
-}
+)

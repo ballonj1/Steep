@@ -9,10 +9,10 @@ constructor(props){
   this.buttonRender = this.buttonRender.bind(this);
 }
 
-  handleLeave(joinedEventId){
+  handleLeave(user_id, joinedEventId){
     return e => {
       e.preventDefault();
-      return this.props.leaveEvent(joined_event_id);
+      return this.props.leaveEvent(user_id, joinedEventId);
     }
   }
 
@@ -32,7 +32,7 @@ constructor(props){
 
     if (joinedEventId.length > 0) {
       return (
-        <button onClick={this.handleLeave(joinedEventId)}>LEAVE EVENT</button>
+        <button onClick={this.handleLeave(this.props.session.currentUser.id, joinedEventId[0].id)}>LEAVE EVENT</button>
       )
     } else {
       return (
