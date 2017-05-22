@@ -39,3 +39,11 @@ Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 T
 Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
 Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
 Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
+
+Join.destroy_all
+
+Join.create(user_id: 1, event_id: 1)
+Join.create(user_id: 2, event_id: 1)
+Join.create(user_id: 3, event_id: 1)
+Join.create(user_id: 4, event_id: 1)
+Join.create(user_id: 5, event_id: 1)
