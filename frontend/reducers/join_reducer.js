@@ -4,7 +4,8 @@ import merge from 'lodash/merge';
 const joinReducer = (state = [], action) => {
   switch(action.type){
     case RECEIVE_JOIN:
-      const newJoins = merge([], state, action.join);
+      const newJoins = merge([], state, [action.join]);
+      debugger
       return newJoins;
     case REMOVE_JOIN:
       const withoutJoin = merge([], state);

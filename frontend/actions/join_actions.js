@@ -14,11 +14,9 @@ export const removeJoin = (join) => ({
 });
 
 export const joinEvent = (user_id, event_id) => (dispatch) => (
-  APIUtil.joinEvent(user_id, event_id)
-    .then((join) => dispatch(receiveJoin(join)))
+  APIUtil.joinEvent(user_id, event_id).then((join) => dispatch(receiveJoin(join)))
 )
 
 export const leaveEvent = (joined_event_id) => (dispatch) => (
-  APIUtil.leaveEvent(joined_event_id)
-    .then((join) => dispatch(removeJoin(join))
+  APIUtil.leaveEvent(joined_event_id).then((join) => dispatch(removeJoin(join)))
 )

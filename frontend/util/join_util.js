@@ -9,6 +9,6 @@ export const joinEvent = (user_id, event_id) => (
 export const leaveEvent = (joined_event_id) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/joins/${joined_event_id}`
+    url: `/api/joins/${joined_event_id}`,
   })
 );

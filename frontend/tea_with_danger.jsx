@@ -4,7 +4,7 @@ import configureStore from './store/store';
 import Root from './components/root';
 import { fetchCity, fetchCities } from './actions/cities_action';
 import { fetchEvents } from './actions/events_actions';
-import { joinEvent, leaveEvent } from './util/join_util';
+import { joinEvent, leaveEvent } from './actions/join_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
