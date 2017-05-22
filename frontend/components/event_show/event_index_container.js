@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
-import { EventWithRouter } from './event';
+import { EventWithRouter } from './event_index';
 import { fetchEvents } from '../../actions/events_actions';
+
+
 
 const mapStateToProps = ({ events }, { city }) => ({
   city,

@@ -11,11 +11,11 @@ class Event extends React.Component {
   }
 
   render(){
-    console.log(this.props.events)
-    debugger
     return(
       <div>
-        <p>Here now.</p>
+        <ul>
+
+        </ul>
       </div>
     )
   }

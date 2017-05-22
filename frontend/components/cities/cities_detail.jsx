@@ -1,5 +1,5 @@
 import React from 'react';
-import EventContainer from '../event_show/event_container';
+import EventIndexContainer from '../event_show/event_index_container';
 import { Route } from 'react-router-dom';
 
 class CitiesDetail extends React.Component {
@@ -22,7 +22,7 @@ class CitiesDetail extends React.Component {
           </div>
         </div>
         <div className="city-detail-content">
-          <EventContainer city={city}/>
+          <EventIndexContainer city={city}/>
         </div>
       </div>
     )
