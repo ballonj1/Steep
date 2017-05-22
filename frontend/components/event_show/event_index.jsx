@@ -9,16 +9,20 @@ class EventIndex extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvents(parseInt(this.props.match.params.id));
+    if (this.props.session.currentUser){
+      this.props.fetchJoins(parseInt(this.props.session.currentUser.id));
+    }
   }
 
   render(){
-    const { events, city } = this.props
+    const { events, city, joins } = this.props
+
     return(
       <div className="event-detail-container">
         <ul>
           {events.map((event, idx) => {
             return(
-              <li key={idx}><EventDetailContainer key={idx} event={event} /></li>
+              <li key={idx}><EventDetailContainer key={idx} event={event} joins={joins} /></li>
             )
           })}
         </ul>

@@ -16,7 +16,7 @@ class CitiesDetail extends React.Component {
     });
     const image_url = city.length > 0 ? city[0].image_url : "";
     const city_name = city.length > 0 ? city[0].name : "";
-
+    
     return(
       <div className="city-detail-container">
         <div className="hero-image-container">

@@ -1,15 +1,18 @@
 import { connect } from 'react-redux';
 import { EventIndexWithRouter } from './event_index';
 import { fetchEvents } from '../../actions/events_actions';
+import { fetchJoins } from '../../actions/join_actions';
 
 
-
-const mapStateToProps = ({ events }, { city }) => ({
+const mapStateToProps = ({ events, joins, session }, { city }) => ({
+  session,
   city,
-  events
+  events,
+  joins
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  fetchJoins: (user_id) => dispatch(fetchJoins(user_id)),
   fetchEvents: (city_id) => dispatch(fetchEvents(city_id))
 });
 

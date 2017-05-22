@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import CitiesDetail from './cities_detail';
 import { fetchCity } from '../../actions/cities_action';
 
-const mapStateToProps = ({ cities }) => ({
+
+const mapStateToProps = ({ cities, joins }) => ({
   cities
 });
 

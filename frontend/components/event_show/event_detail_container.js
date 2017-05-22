@@ -3,10 +3,10 @@ import EventDetail from './event_detail';
 import { joinEvent, leaveEvent } from '../../actions/join_actions';
 import { currentUserJoins } from '../../reducers/selectors';
 
-const mapStateToProps = ({ session, joins }, { event }) => ({
+const mapStateToProps = ({ session }, { event, joins }) => ({
   session,
   event,
-  joins: currentUserJoins(joins, session)
+  joins
 });
 
 const mapDispatchToProps = (dispatch) => ({
