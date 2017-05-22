@@ -1,7 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import EventDetailContainer from './event_detail_container';
 
-class Event extends React.Component {
+class EventIndex extends React.Component {
   constructor(props){
     super(props)
   }
@@ -14,11 +15,11 @@ class Event extends React.Component {
     return(
       <div>
         <ul>
-
+          
         </ul>
       </div>
     )
   }
 }
 
-export const EventWithRouter = withRouter(Event);
+export const EventIndexWithRouter = withRouter(EventIndex);
