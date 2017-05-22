@@ -14,12 +14,13 @@ class CitiesDetail extends React.Component {
     const city = cities.filter((city) => {
       return city.id === parseInt(this.props.match.params.id);
     });
+    const image_url = city.length > 0 ? city[0].image_url : "";
+    const city_name = city.length > 0 ? city[0].name : "";
+
     return(
       <div className="city-detail-container">
         <div className="hero-image-container">
-          <div className="hero-image">
-            <h1>{city.length > 0 ? city[0].name : ""}</h1>
-          </div>
+            <img className="hero-image" src={image_url} alt/>
         </div>
         <div className="city-detail-content">
           <EventIndexContainer city={city}/>

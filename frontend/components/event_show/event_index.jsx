@@ -12,7 +12,7 @@ class EventIndex extends React.Component {
   }
 
   render(){
-    const { events } = this.props
+    const { events, city } = this.props
     return(
       <div>
         <ul>
