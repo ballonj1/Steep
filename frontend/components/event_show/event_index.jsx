@@ -5,6 +5,9 @@ import EventDetailContainer from './event_detail_container';
 class EventIndex extends React.Component {
   constructor(props){
     super(props)
+
+    this.handleJoin = this.handleJoin.bind(this);
+    this.renderCityButton = this.renderCityButton.bind(this);
   }
 
   componentDidMount() {
@@ -14,8 +17,30 @@ class EventIndex extends React.Component {
     }
   }
 
+  handleJoin(city_id, user_id){
+    return e => {
+      e.preventDefault();
+      this.props.updateUserCity(city_id, user_id);
+    }
+  }
+
+  renderCityButton(){
+    if (this.props.city.length > 0){
+      if (this.props.session.currentUser.city_id !== this.props.city[0].id){
+        return(
+          <button className="event-button" onClick={this.handleJoin(this.props.city[0].id, this.props.session.currentUser.id)}>Make {this.props.city[0].name} your home city!</button>
+        )
+      } else {
+        return(
+          <button className="event-button" onClick={this.handleJoin("", this.props.session.currentUser.id)}>Leave {this.props.city[0].name}!</button>
+        )
+      }
+    }
+  }
+
   render(){
     const { events, city, joins } = this.props
+    const button = this.renderCityButton();
     return(
       <div className="event-detail-container">
         <div className="event-detail-description">
@@ -24,6 +49,7 @@ class EventIndex extends React.Component {
           </h2>
           <p>You'll never leave without questions, new perspectives, and the reminder that we're far more the same than we are different</p>
         </div>
+        {button}
         <div className="event-details">
           {events.map((event, idx) => {
             return(

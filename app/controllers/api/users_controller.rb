@@ -21,7 +21,6 @@ class Api::UsersController < ApplicationController
   def update
     @user = User.find_by(id: params[:id])
     if @user.update_attributes(user_params)
-      debugger
       render :show
     else
       render json: @users.errors.full_messages, status: 422
