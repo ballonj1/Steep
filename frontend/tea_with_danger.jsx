@@ -8,7 +8,7 @@ import { joinEvent, leaveEvent, fetchJoins } from './actions/join_actions';
 import { fetchHost } from './actions/host_actions';
 import { updateUser, updateUserCity } from './actions/user_actions';
 import { updateEvent } from './util/events_util';
-import { createEvent } from './util/events_util';
+import { createEvent } from './actions/events_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;

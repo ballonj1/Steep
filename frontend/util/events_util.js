@@ -13,8 +13,7 @@ export const updateEvent = (event_id, current_attend) => (
   })
 )
 
-export const createEvent = (date, time, address, description, host_id,
-                            city_id, max_attend, current_attend) => (
+export const createEvent = (date, time, address, description, host_id, city_id, max_attend, current_attend) => (
   $.ajax({
     method: "POST",
     url: `/api/cities/${city_id}/events`,
