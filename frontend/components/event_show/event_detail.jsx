@@ -11,6 +11,7 @@ constructor(props){
 }
   componentDidMount(){
     this.props.fetchJoins(this.props.session.currentUser.id);
+    this.props.fetchHost(this.props.event.host_id);
   }
 
   handleLeave(user_id, joinedEventId){

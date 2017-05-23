@@ -5,6 +5,7 @@ import Root from './components/root';
 import { fetchCity, fetchCities } from './actions/cities_action';
 import { fetchEvents } from './actions/events_actions';
 import { joinEvent, leaveEvent, fetchJoins } from './actions/join_actions';
+import { fetchHost } from './actions/host_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDom.render(<Root store={store} />, root);
 });
 
+window.fetchHost = fetchHost;
 window.fetchJoins = fetchJoins;
 window.leaveEvent = leaveEvent;
 window.joinEvent = joinEvent;
