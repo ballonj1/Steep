@@ -8,6 +8,7 @@ import { joinEvent, leaveEvent, fetchJoins } from './actions/join_actions';
 import { fetchHost } from './actions/host_actions';
 import { updateUser, updateUserCity } from './actions/user_actions';
 import { updateEvent } from './util/events_util';
+import { createEvent } from './util/events_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDom.render(<Root store={store} />, root);
 });
 
+window.createEvent = createEvent;
 window.updateEvent = updateEvent;
 window.updateUserCity = updateUserCity;
 window.updateUser = updateUser;

@@ -1,6 +1,7 @@
 class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
+    debugger
     if @event.save
       render :show
     else
@@ -31,7 +32,6 @@ class Api::EventsController < ApplicationController
 
   def update
     @event = Event.find_by(id: params[:id])
-    debugger
     if @event.update_attributes(event_params)
       render :show
     else
@@ -46,6 +46,6 @@ class Api::EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:date, :time, :address, :description, :host_id, :user_id, :max_attend, :current_attend)
+    params.require(:event).permit(:date, :time, :address, :description, :host_id, :city_id, :max_attend, :current_attend)
   end
 end
