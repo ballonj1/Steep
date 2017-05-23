@@ -6,10 +6,10 @@ export const updateUser = (image_url, user_id) => (
   })
 )
 
-export const updateUserCity = (city_name, user_id) => (
+export const updateUserCity = (city_name, city_id, user_id) => (
   $.ajax({
     method: 'PATCH',
     url: `/api/users/${user_id}`,
-    data: {user: {city_name}}
+    data: {user: {city_id, city_name}}
   })
 )

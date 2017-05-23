@@ -15,7 +15,7 @@ const mapStateToProps = ({ events, joins, session }, { city }) => ({
 const mapDispatchToProps = (dispatch) => ({
   fetchJoins: (user_id) => dispatch(fetchJoins(user_id)),
   fetchEvents: (city_id) => dispatch(fetchEvents(city_id)),
-  updateUserCity: (city_id, user_id) => dispatch(updateUserCity(city_id, user_id))
+  updateUserCity: (city_name, city_id, user_id) => dispatch(updateUserCity(city_name, city_id, user_id))
 });
 
 export default connect(

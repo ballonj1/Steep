@@ -11,6 +11,6 @@ export const updateUser = (image_url, user_id) => (dispatch) => (
   APIUtil.updateUser(image_url, user_id).then((user) => dispatch(receiveCurrentUser(user)))
 )
 
-export const updateUserCity = (city_name, user_id) => (dispatch) => (
-  APIUtil.updateUserCity(city_name, user_id).then((user) => dispatch(receiveCurrentUser(user)))
-)
+export const updateUserCity = (city_name, city_id, user_id) => (dispatch) => {
+  APIUtil.updateUserCity(city_name, city_id, user_id).then((user) => dispatch(receiveCurrentUser(user)))
+}

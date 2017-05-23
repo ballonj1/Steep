@@ -17,22 +17,22 @@ class EventIndex extends React.Component {
     }
   }
 
-  handleJoin(city_id, user_id){
+  handleJoin(city_name, city_id, user_id){
     return e => {
       e.preventDefault();
-      this.props.updateUserCity(city_id, user_id);
+      this.props.updateUserCity(city_name, city_id, user_id);
     }
   }
 
   renderCityButton(){
     if (this.props.city.length > 0){
-      if (this.props.session.currentUser.city_name !== this.props.city[0].name){
+      if (this.props.session.currentUser.city_id !== this.props.city[0].id){
         return(
-          <button className="event-button" onClick={this.handleJoin(this.props.city[0].name, this.props.session.currentUser.id)}>Make {this.props.city[0].name} your home city!</button>
+          <button className="event-button" onClick={this.handleJoin(this.props.city[0].name, this.props.city[0].id, this.props.session.currentUser.id)}>Make {this.props.city[0].name} your home city!</button>
         )
       } else {
         return(
-          <button className="event-button" onClick={this.handleJoin("", this.props.session.currentUser.id)}>Leave {this.props.city[0].name}!</button>
+          <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>Leave {this.props.city[0].name}!</button>
         )
       }
     }
