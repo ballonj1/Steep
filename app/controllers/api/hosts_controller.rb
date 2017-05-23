@@ -29,6 +29,6 @@ class Api::HostsController < ApplicationController
   end
 
   def host_params
-    params.require(:host).params(:user_id, :event_id)
+    params.require(:host).permit(:user_id, :event_id)
   end
 end
