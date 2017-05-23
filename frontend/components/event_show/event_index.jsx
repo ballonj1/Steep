@@ -22,7 +22,7 @@ class EventIndex extends React.Component {
         <ul>
           {events.map((event, idx) => {
             return(
-              <li key={idx}><EventDetailContainer key={idx} event={event} joins={joins} /></li>
+              <li key={idx}><EventDetailContainer key={idx} event={event} /></li>
             )
           })}
         </ul>
