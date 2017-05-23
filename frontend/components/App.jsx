@@ -14,9 +14,9 @@ const App = () => (
       <NavbarContainer />
     </header>
     <div className="main-content">
-      <AuthRoute path="/signIn" component={sessionFormContainer} />
-      <AuthRoute path="/signUp" component={signUpFormContainer} />
       <Switch>
+        <AuthRoute path="/signIn" component={sessionFormContainer} />
+        <AuthRoute path="/signUp" component={signUpFormContainer} />
         <Route path="/cities/:id" component={CitiesDetailContainer} />
         <Route path="/cities" component={CitiesIndexContainer} />
       </Switch>

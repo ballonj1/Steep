@@ -60,6 +60,8 @@ constructor(props){
           <p className="event-address">{event.address}</p>
           <p className="event-description">{event.description}</p>
           <hr></hr>
+          <p className="event-current-attend">{event.current_attend}</p>
+          <p className="event-max-attend">{event.max_attend}</p>
         </div>
         {button}
       </div>
