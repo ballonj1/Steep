@@ -26,9 +26,9 @@ class EventIndex extends React.Component {
 
   renderCityButton(){
     if (this.props.city.length > 0){
-      if (this.props.session.currentUser.city_id !== this.props.city[0].id){
+      if (this.props.session.currentUser.city_name !== this.props.city[0].name){
         return(
-          <button className="event-button" onClick={this.handleJoin(this.props.city[0].id, this.props.session.currentUser.id)}>Make {this.props.city[0].name} your home city!</button>
+          <button className="event-button" onClick={this.handleJoin(this.props.city[0].name, this.props.session.currentUser.id)}>Make {this.props.city[0].name} your home city!</button>
         )
       } else {
         return(

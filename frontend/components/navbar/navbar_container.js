@@ -3,6 +3,7 @@ import { signIn, signUp, signOut } from '../../actions/session_actions';
 import Navbar from './navbar';
 
 const mapStateToProps = ({ session }) => ({
+  session,
   signedIn: Boolean(session.currentUser)
 });
 

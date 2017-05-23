@@ -2,8 +2,8 @@ import React from 'react';
 import { NavLink, Route, Link } from 'react-router-dom';
 
 
-const signedInNav = (signOut, signedIn) => {
-  if (signedIn) {
+const signedInNav = (signOut, signedIn, session) => {
+  if (signedIn && session.currentUser) {
     return (
       <header className="main-nav">
         <nav className="left-nav">
@@ -13,6 +13,7 @@ const signedInNav = (signOut, signedIn) => {
         </nav>
         <nav className="right-nav">
           <div className="right-nav-contents">
+            {(session.currentUser && session.currentUser.city_name) ? (<div><NavLink className="nav-routes" to="/cities">{session.currentUser.city_name.toUpperCase()}</NavLink></div>) : ""}
             <div>
               <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
             </div>
@@ -24,7 +25,7 @@ const signedInNav = (signOut, signedIn) => {
   }
 }
 
-const signedOutNav = (signedIn) => {
+const signedOutNav = (signedIn, session) => {
   if (!signedIn) {
     return (
       <header className="main-nav">
@@ -49,8 +50,8 @@ const signedOutNav = (signedIn) => {
   }
 }
 
-const Navbar = ({ signedIn, signOut }) => (
-  (signedIn) ? signedInNav(signOut, signedIn) : signedOutNav(signedIn)
+const Navbar = ({ signedIn, signOut, session }) => (
+  (signedIn) ? signedInNav(signOut, signedIn, session) : signedOutNav(signedIn, session)
 )
 
 export default Navbar;
