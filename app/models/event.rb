@@ -5,6 +5,5 @@ class Event < ApplicationRecord
   has_many :joins
   has_many :users, through: :joins
   belongs_to :city
-  belongs_to :host, primary_key: "id", foreign_key: "user_id"
-
+  belongs_to :host
 end

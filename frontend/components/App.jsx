@@ -19,6 +19,7 @@ const App = () => (
         <AuthRoute path="/signUp" component={signUpFormContainer} />
         <Route path="/cities/:id" component={CitiesDetailContainer} />
         <Route path="/cities" component={CitiesIndexContainer} />
+
       </Switch>
     </div>
     <div className="footer">
