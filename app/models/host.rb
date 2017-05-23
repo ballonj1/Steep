@@ -1,6 +1,6 @@
 class Host < ApplicationRecord
-  validates :description, :user_id, presence: true
+  validates :event_id, :user_id, presence: true
 
   belongs_to :user
-  has_many :events
+  belongs_to :event
 end
