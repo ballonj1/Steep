@@ -20,7 +20,7 @@ class Api::UsersController < ApplicationController
 
   def update
     @user = User.find_by(id: params[:id])
-    if @user.update_attribute(:image_url, params[:user][:image_url])
+    if @user.update_attributes(user_params)
       debugger
       render :show
     else
