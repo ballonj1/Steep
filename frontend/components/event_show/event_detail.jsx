@@ -37,11 +37,11 @@ constructor(props){
 
       if (joinedEventId.length > 0) {
         return (
-          <button onClick={this.handleLeave(this.props.session.currentUser.id, joinedEventId[0].id)}>LEAVE EVENT</button>
+          <button className="event-button" onClick={this.handleLeave(this.props.session.currentUser.id, joinedEventId[0].id)}>LEAVE EVENT</button>
         )
       } else {
         return (
-          <button onClick={this.handleJoin(this.props.session.currentUser.id, this.props.event.id)}>JOIN EVENT</button>
+          <button className="event-button" onClick={this.handleJoin(this.props.session.currentUser.id, this.props.event.id)}>JOIN EVENT</button>
         )
       }
     }
@@ -52,12 +52,14 @@ constructor(props){
     const { event } = this.props
     const button = this.buttonRender();
     return(
-      <div className="event-container">
-        <p>{event.description}</p>
-        <p>{event.address}</p>
-        <p>{event.time}</p>
-        <p>{event.date}</p>
-        <p>{event.id}</p>
+      <div className="event-container-and-button">
+        <div className="event-container">
+          <p className="event-date">{event.date}</p>
+          <p className="event-time">{event.time}</p>
+          <p className="event-address">{event.address}</p>
+          <p className="event-description">{event.description}</p>
+          <hr></hr>
+        </div>
         {button}
       </div>
     )

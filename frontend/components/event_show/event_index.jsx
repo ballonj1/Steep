@@ -16,16 +16,21 @@ class EventIndex extends React.Component {
 
   render(){
     const { events, city, joins } = this.props
-
     return(
       <div className="event-detail-container">
-        <ul>
+        <div className="event-detail-description">
+          <h2>
+            Tea Time is a conversation between a few people who know nothing about each other.
+          </h2>
+          <p>You'll never leave without questions, new perspectives, and the reminder that we're far more the same than we are different</p>
+        </div>
+        <div className="event-details">
           {events.map((event, idx) => {
             return(
-              <li key={idx}><EventDetailContainer key={idx} event={event} /></li>
+              <EventDetailContainer key={idx} event={event} />
             )
           })}
-        </ul>
+        </div>
       </div>
     )
   }
