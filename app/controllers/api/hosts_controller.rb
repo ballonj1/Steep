@@ -9,7 +9,8 @@ class Api::HostsController < ApplicationController
   end
 
   def index
-    @hosts = Host.find_by(user_id: params[:user_id])
+    @user = User.find_by(id: params[:user_id])
+    @hosts = @user.hosts
     render :index
   end
 

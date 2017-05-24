@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   cities: citiesReducer,
   events: eventsReducer,
   joins: joinReducer,
-  host: hostReducer
+  hosts: hostReducer
 });
 
 export default rootReducer;

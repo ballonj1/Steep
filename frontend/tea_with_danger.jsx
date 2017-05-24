@@ -9,7 +9,7 @@ import { fetchHost } from './actions/host_actions';
 import { updateUser, updateUserCity } from './actions/user_actions';
 import { updateEvent } from './util/events_util';
 import { createEvent } from './actions/events_actions';
-import { createHost } from './util/host_util';
+import { createHost, fetchHosts } from './actions/host_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDom.render(<Root store={store} />, root);
 });
 
+window.fetchHosts = fetchHosts;
 window.createHost = createHost;
 window.createEvent = createEvent;
 window.updateEvent = updateEvent;
