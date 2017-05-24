@@ -3,12 +3,14 @@ import { EventIndexWithRouter } from './event_index';
 import { fetchEvents } from '../../actions/events_actions';
 import { fetchJoins } from '../../actions/join_actions';
 import { updateUserCity } from '../../actions/user_actions';
+import { getByCity } from '../../reducers/selectors';
 
 
-const mapStateToProps = ({ events, joins, session }, { city }) => ({
+const mapStateToProps = ({ events, joins, session, cities }, { city }) => ({
   session,
   city,
-  events,
+  cities,
+  events: getByCity(city, events),
   joins
 });
 
