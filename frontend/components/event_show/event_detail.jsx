@@ -13,17 +13,17 @@ constructor(props){
     this.props.fetchJoins(this.props.session.currentUser.id);
   }
 
-  handleLeave(user_id, joinedEventId){
+  handleLeave(event_id, current_attend){
     return e => {
       e.preventDefault();
-      return this.props.leaveEvent(user_id, joinedEventId);
+      return this.props.updateEvent(event_id, current_attend - 1);
     }
   }
 
-  handleJoin(user_id, event_id){
+  handleJoin(event_id, current_attend){
     return e => {
       e.preventDefault();
-      return this.props.joinEvent(user_id, event_id);
+      return this.props.updateEvent(event_id, current_attend + 1);
     }
   }
 
@@ -36,12 +36,13 @@ constructor(props){
       });
 
       if (joinedEventId.length > 0) {
+        debugger
         return (
-          <button className="event-button" onClick={this.handleLeave(this.props.session.currentUser.id, joinedEventId[0].id)}>LEAVE EVENT</button>
+          <button className="event-button" onClick={this.handleLeave(this.props.event.id, this.props.event.current_attend)}>LEAVE EVENT</button>
         )
       } else {
         return (
-          <button className="event-button" onClick={this.handleJoin(this.props.session.currentUser.id, this.props.event.id)}>JOIN EVENT</button>
+          <button className="event-button" onClick={this.handleJoin(this.props.event.id, this.props.event.current_attend)}>JOIN EVENT</button>
         )
       }
     }

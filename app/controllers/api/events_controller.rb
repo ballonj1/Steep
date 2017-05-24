@@ -33,6 +33,7 @@ class Api::EventsController < ApplicationController
   def update
     @event = Event.find_by(id: params[:id])
     if @event.update_attributes(event_params)
+      current_user.joins.create(user_id: current_user.id, event_id: @event.id)
       render :show
     else
       render json: ["The event is full"]
