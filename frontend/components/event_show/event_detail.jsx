@@ -4,13 +4,12 @@ class EventDetail extends React.Component {
 constructor(props){
   super(props)
 
-
   this.handleLeave = this.handleLeave.bind(this);
   this.handleJoin = this.handleJoin.bind(this);
   this.buttonRender = this.buttonRender.bind(this);
 }
   componentDidMount(){
-    this.props.fetchJoins(this.props.session.currentUser.id);
+    this.props.fetchEvents(this.props.event.city_id);
   }
 
   handleLeave(event_id, current_attend){
@@ -28,17 +27,18 @@ constructor(props){
   }
 
   buttonRender(){
-    if (Array.isArray(this.props.joins)){
-      const joinedEventId = this.props.joins.filter((join) => {
-        if (join.event_id === this.props.event.id) {
-          return join.id;
-        }
-      });
+    if (this.props.event.hosting) {
+      return ""
+    }
 
-      if (joinedEventId.length > 0) {
-        debugger
+    if (this.props.event.attending) {
+      return (
+        <button className="event-button" onClick={this.handleLeave(this.props.event.id, this.props.event.current_attend)}>LEAVE EVENT</button>
+      )
+    } else {
+      if (this.props.event.event_full){
         return (
-          <button className="event-button" onClick={this.handleLeave(this.props.event.id, this.props.event.current_attend)}>LEAVE EVENT</button>
+          <button className="full-event-button">FULL EVENT</button>
         )
       } else {
         return (
@@ -49,7 +49,6 @@ constructor(props){
   }
 
   render(){
-
     const { event } = this.props
     const button = this.buttonRender();
     return(
@@ -60,8 +59,7 @@ constructor(props){
           <p className="event-address">{event.address}</p>
           <p className="event-description">{event.description}</p>
           <hr></hr>
-          <p className="event-current-attend">{event.current_attend}</p>
-          <p className="event-max-attend">{event.max_attend}</p>
+          <p className="event-spots-left">Spots Left: {event.max_attend - event.current_attend}</p>
         </div>
         {button}
       </div>

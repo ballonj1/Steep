@@ -31,12 +31,25 @@ class Api::EventsController < ApplicationController
   end
 
   def update
+    new_attend = params[:event][:current_attend].to_i
     @event = Event.find_by(id: params[:id])
-    if @event.update_attributes(event_params)
-      current_user.joins.create(user_id: current_user.id, event_id: @event.id)
-      render :show
-    else
-      render json: ["The event is full"]
+    if (@event.current_attend < new_attend) && new_attend < @event.max_attend
+      if @event.update_attributes(event_params)
+        current_user.joins.create(user_id: current_user.id, event_id: @event.id)
+        @events = Event.all
+        render :index
+      else
+        render json: @event.errors.full_messages
+      end
+    elsif @event.current_attend > new_attend
+      if @event.update_attributes(event_params)
+        @join = current_user.joins.find_by(event_id: params[:id])
+        @join.destroy
+        @events = Event.all
+        render :index
+      else
+        render json: @event.errors.full_messages
+      end
     end
   end
 

@@ -11,8 +11,8 @@ class HostForm extends React.Component {
       description: "",
       host_id: this.props.currentUser ? this.props.currentUser.id : "",
       city_id: parseInt(this.props.match.params.id),
-      max_attend: 0,
-      current_attend: ""
+      max_attend: "",
+      current_attend: 0
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }

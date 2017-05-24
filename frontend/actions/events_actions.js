@@ -32,5 +32,5 @@ export const createEvent = ({ event }) => (dispatch) => (
 )
 
 export const updateEvent = (event_id, current_attend) => (dispatch) => (
-  APIUtil.updateEvent(event_id, current_attend).then((event) => console.log(event))
+  APIUtil.updateEvent(event_id, current_attend).then((events) => dispatch(receiveEvents(events)))
 )

@@ -3,6 +3,7 @@ import EventDetail from './event_detail';
 import { joinEvent, leaveEvent, fetchJoins } from '../../actions/join_actions';
 import { currentUserJoins } from '../../reducers/selectors';
 import { fetchHost } from '../../actions/host_actions';
+import { updateEvent, fetchEvents } from '../../actions/events_actions';
 
 const mapStateToProps = ({ session, joins, host }, { event }) => ({
   session,
@@ -15,6 +16,7 @@ const mapDispatchToProps = (dispatch) => ({
   joinEvent: (user_id, event_id) => dispatch(joinEvent(user_id, event_id)),
   leaveEvent: (user_id, joined_event_id) => dispatch(leaveEvent(user_id, joined_event_id)),
   fetchJoins: (user_id) => dispatch(fetchJoins(user_id)),
+  fetchEvents: (city_id) => dispatch(fetchEvents(city_id)),
   updateEvent: (event_id, current_attend) => dispatch(updateEvent(event_id, current_attend))
 });
 

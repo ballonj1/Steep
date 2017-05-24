@@ -72,6 +72,22 @@
   font-weight: 600;
 }
 
+.full-event-button {
+  background-color: #EF6236;
+  border: 2px solid #EF6236;
+  border-radius: 10px;
+  height: 50px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: relative;
+  margin-bottom: 40px;
+  padding: 0px 10px;
+  font-weight: 600;
+}
+
 .event-button:active {
   top: 2px;
 }
