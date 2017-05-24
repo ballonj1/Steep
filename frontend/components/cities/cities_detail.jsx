@@ -26,7 +26,9 @@ class CitiesDetail extends React.Component {
         <div className="city-detail-content">
           <EventIndexContainer city={city}/>
         </div>
-        <Link className="event-button" to={`/cities/${cityId}/hosting`}>HOST AN EVENT</Link>
+        <div className="host-button-container">
+          <Link className="host-button" to={`/cities/${cityId}/hosting`}>HOST AN EVENT IN {city_name.toUpperCase()}</Link>
+        </div>
       </div>
     )
   }

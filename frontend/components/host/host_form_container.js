@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createEvent } from '../../actions/host_actions';
+import { createEvent } from '../../actions/events_actions';
 import HostForm from './host_form.jsx';
 
 const mapStateToProps = ({ session }) => ({
@@ -7,9 +7,7 @@ const mapStateToProps = ({ session }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  createEvent: (date, time, address, description, host_id, city_id,
-                max_attend, current_attend) => (dispatch(createEvent(date, time, address, description, host_id, city_id,
-                              max_attend, current_attend)))
+  createEvent: ({ event }) => dispatch(createEvent({ event }))
 });
 
 export default connect(

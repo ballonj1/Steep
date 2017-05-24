@@ -1,8 +1,8 @@
 class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
-    debugger
     if @event.save
+      current_user.hosts.create(event_id: @event.id, user_id: @event.host_id)
       render :show
     else
       render json: @event.errors.full_messages, status: 422

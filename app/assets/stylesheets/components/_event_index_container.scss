@@ -20,6 +20,7 @@
   justify-content: center;
   flex-wrap: wrap;
   border-top: 1px solid #DDD;
+  border-bottom: 1px solid #DDD;
 }
 
 .event-detail-description {
@@ -79,4 +80,8 @@ hr {
   border-bottom: 1px solid #DDD;
   margin: 1em 0;
   opacity: 0.25;
+}
+
+.host-submit {
+  font-weight: 600;
 }

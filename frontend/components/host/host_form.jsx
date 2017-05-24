@@ -9,16 +9,85 @@ class HostForm extends React.Component {
       time: "",
       address: "",
       description: "",
-      host_id: "",
-      city_id: "",
-      max_attend: "",
+      host_id: this.props.currentUser ? this.props.currentUser.id : "",
+      city_id: parseInt(this.props.match.params.id),
+      max_attend: 0,
       current_attend: ""
+    }
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.signedIn) {
+      this.props.history.push('/');
     }
   }
 
-  render(){
+  update(field){
+    return e => {
+      if (field === 'max_attend') {
+        this.setState({
+          [field]: parseInt(e.currentTarget.value)
+        });
+      } else {
+        this.setState({
+          [field]: e.currentTarget.value
+        });
+      }
+    }
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    const event = this.state;
+    this.props.createEvent({event}).then(this.props.history.push(`/cities/${this.props.match.params.id}`));
+  }
+
+  render() {
     return(
-      <p>Another one.</p>
+      <div className="sign-up-form-container">
+        <form onSubmit={this.handleSubmit} className="sign-up-form-box">
+          <h2>Join for tea time</h2>
+          <p className="sign-up-text">Thousands of strangers across the world have sat
+              together for conversations. We can't wait for you to join them.</p>
+          <br/>
+          <div className="sign-up-form">
+              <input type="date"
+                value={this.state.date}
+                onChange={this.update('date')}
+                className="sign-up-box"
+                placeholder="Date"
+              />
+              <input type="text"
+                value={this.state.last_name}
+                onChange={this.update('time')}
+                className="sign-up-box"
+                placeholder="9:30 AM"
+              />
+              <input type="text"
+                value={this.state.address}
+                onChange={this.update('address')}
+                className="sign-up-box"
+                placeholder="949 Grant Ave, San Francisco, CA 94108"
+              />
+              <input type="text"
+                value={this.state.description}
+                onChange={this.update('description')}
+                className="sign-up-box"
+                placeholder="A peaceful sit down."
+              />
+              <input type="number"
+                value={parseInt(this.state.max_attend)}
+                onChange={this.update('max_attend')}
+                className="sign-up-box"
+                placeholder="8"
+              />
+            <br/>
+            <input className='host-submit' type="submit" value="HOST THIS EVENT!" />
+          </div>
+        </form>
+      </div>
     )
   }
 }

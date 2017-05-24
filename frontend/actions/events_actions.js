@@ -26,7 +26,7 @@ export const fetchEvents = (city_id) => (dispatch) => (
                 (errors) => dispatch(receiveErrors(errors)))
 )
 
-export const createEvent = (date, time, address, description, host_id, city_id, max_attend, current_attend) => (dispatch) => (
-  APIUtil.createEvent(date, time, address, description, host_id, city_id, max_attend, current_attend)
+export const createEvent = ({ event }) => (dispatch) => (
+  APIUtil.createEvent({ event })
     .then((event) => dispatch(receiveEvent(event)))
 )

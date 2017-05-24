@@ -28,11 +28,11 @@ class EventIndex extends React.Component {
     if (this.props.city.length > 0){
       if (this.props.session.currentUser.city_id !== this.props.city[0].id){
         return(
-          <button className="event-button" onClick={this.handleJoin(this.props.city[0].name, this.props.city[0].id, this.props.session.currentUser.id)}>Make {this.props.city[0].name} your home city!</button>
+          <button className="event-button" onClick={this.handleJoin(this.props.city[0].name, this.props.city[0].id, this.props.session.currentUser.id)}>MAKE {this.props.city[0].name.toUpperCase()} YOUR HOME CITY!</button>
         )
       } else {
         return(
-          <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>Leave {this.props.city[0].name}!</button>
+          <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>LEAVE {this.props.city[0].name.toUpperCase()}!</button>
         )
       }
     }
