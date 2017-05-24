@@ -15,7 +15,6 @@ const mapDispatchToProps = (dispatch) => ({
   joinEvent: (user_id, event_id) => dispatch(joinEvent(user_id, event_id)),
   leaveEvent: (user_id, joined_event_id) => dispatch(leaveEvent(user_id, joined_event_id)),
   fetchJoins: (user_id) => dispatch(fetchJoins(user_id)),
-  fetchHost: (host_id) => dispatch(fetchHost(host_id))
 });
 
 export default connect(

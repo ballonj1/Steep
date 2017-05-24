@@ -15,9 +15,6 @@ const signedInNav = (signOut, signedIn, session) => {
           <div className="right-nav-contents">
             {(session.currentUser && session.currentUser.city_name) ? (<div><NavLink className="nav-routes" to={`/cities/${session.currentUser.city_id}`}>{session.currentUser.city_name.toUpperCase()}</NavLink></div>) : ""}
             <div>
-              <NavLink className="nav-routes" to="/hosting">HOSTING</NavLink>
-            </div>
-            <div>
               <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
             </div>
             <button className="nav-emphasis nav-routes" onClick={signOut}>SIGN OUT</button>
@@ -39,9 +36,6 @@ const signedOutNav = (signedIn, session) => {
         </nav>
         <nav className="right-nav">
           <div className="right-nav-contents">
-            <div>
-              <NavLink className="nav-routes" to="/hosting">HOSTING</NavLink>
-            </div>
             <div>
               <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
             </div>

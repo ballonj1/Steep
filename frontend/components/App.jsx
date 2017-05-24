@@ -7,6 +7,7 @@ import NavbarContainer from './navbar/navbar_container';
 import Footer from './footer/footer';
 import CitiesIndexContainer from './cities/cities_index_container';
 import CitiesDetailContainer from './cities/cities_detail_container';
+import HostFormContainer from './host/host_form_container';
 
 const App = () => (
   <div>
@@ -17,9 +18,9 @@ const App = () => (
       <Switch>
         <AuthRoute path="/signIn" component={sessionFormContainer} />
         <AuthRoute path="/signUp" component={signUpFormContainer} />
+        <Route path="/cities/:id/hosting" component={HostFormContainer} />
         <Route path="/cities/:id" component={CitiesDetailContainer} />
         <Route path="/cities" component={CitiesIndexContainer} />
-
       </Switch>
     </div>
     <div className="footer">

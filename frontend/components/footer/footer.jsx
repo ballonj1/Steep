@@ -5,7 +5,6 @@ const Footer = () => (
   <div className="footer-container">
     <div className="nav-route-links">
       <NavLink className="nav-routes" to="/about">ABOUT</NavLink>
-      <NavLink className="nav-routes" to="/hosting">HOSTING</NavLink>
       <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
     </div>
     <div className="brief-about">
