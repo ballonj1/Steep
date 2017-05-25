@@ -13,5 +13,12 @@ json.set! @host.id do
     json.max_attend @host.event.max_attend
     json.current_attend @host.event.current_attend
     json.event_full @host.event.current_attend == @host.event.max_attend
+    if logged_in?
+      json.attending !!current_user.joins.find_by(event_id: @host.event.id)
+    end
+    if logged_in?
+      json.hosting !!current_user.hosts.find_by(event_id: @host.event.id)
+    end
+    json.event_full @host.event.current_attend == @host.event.max_attend
   end
 end

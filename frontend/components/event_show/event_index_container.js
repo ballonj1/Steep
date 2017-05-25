@@ -7,12 +7,9 @@ import { getByCity } from '../../reducers/selectors';
 import { fetchCity } from '../../actions/cities_action';
 
 
-const mapStateToProps = ({ events, joins, session, cities }, { city }) => ({
+const mapStateToProps = ({ session, cities }) => ({
   session,
-  city,
-  cities,
-  events: getByCity(city, events),
-  joins
+  cities
 });
 
 const mapDispatchToProps = (dispatch) => ({

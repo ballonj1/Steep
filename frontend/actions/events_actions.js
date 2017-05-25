@@ -4,14 +4,14 @@ export const RECEIVE_EVENTS = "RECEIVE_EVENTS";
 export const RECEIVE_EVENT = "RECEIVE_EVENT";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
 export const REMOVE_EVENT = "REMOVE_EVENT";
-
+export const RECEIVE_CITIES = 'RECEIVE_CITIES';
 
 export const removeEvent = (event) => ({
   type: REMOVE_EVENT,
   event
 })
 
-export const receiveEvents = (events = []) => ({
+export const receiveEvents = (events = {}) => ({
   type: RECEIVE_EVENTS,
   events
 });
@@ -24,6 +24,11 @@ export const receiveEvent = (event = {}) => ({
 export const receiveErrors = (errors) => ({
   type: RECEIVE_ERRORS,
   errors
+})
+
+export const receiveCities = (cities) => ({
+  type: RECEIVE_CITIES,
+  cities
 })
 
 export const destroyEvent = (event_id) => (dispatch) => (
@@ -43,5 +48,5 @@ export const createEvent = ({ event }) => (dispatch) => (
 )
 
 export const updateEvent = (event_id, current_attend) => (dispatch) => (
-  APIUtil.updateEvent(event_id, current_attend).then((events) => dispatch(receiveEvents(events)))
+  APIUtil.updateEvent(event_id, current_attend).then((cities) => dispatch(receiveCities(cities)))
 )

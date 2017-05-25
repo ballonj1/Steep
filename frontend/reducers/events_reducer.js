@@ -13,6 +13,7 @@ const eventsReducer = (state = [], action) => {
       const newState = _.merge({}, state, action.event)
       return _.values(newState);
     case RECEIVE_EVENTS:
+      debugger
       return _.values(action.events);
     case RECEIVE_ERRORS:
       return action.errors;

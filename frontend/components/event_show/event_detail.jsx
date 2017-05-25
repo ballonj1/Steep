@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom'
 
 class EventDetail extends React.Component {
 constructor(props){
@@ -8,8 +9,15 @@ constructor(props){
   this.handleJoin = this.handleJoin.bind(this);
   this.buttonRender = this.buttonRender.bind(this);
 }
+
+  componentWillReceiveProps(nextProps){
+    if (nextProps.event.current_attend !== this.props.event.current_attend){
+      this.props.fetchCity(this.props.match.params.id)
+    }
+  }
+
   componentDidMount(){
-    this.props.fetchEvents(this.props.event.city_id);
+    this.props.fetchCity(this.props.match.params.id)
   }
 
   handleLeave(event_id, current_attend){
@@ -67,4 +75,4 @@ constructor(props){
   }
 }
 
-export default EventDetail;
+export const EventDetailWithRouter = withRouter(EventDetail);

@@ -36,8 +36,8 @@ class Api::EventsController < ApplicationController
     if (@event.current_attend < new_attend) && new_attend <= @event.max_attend
       if @event.update_attributes(event_params)
         current_user.joins.create(user_id: current_user.id, event_id: @event.id)
-        @events = Event.all
-        render :index
+        @city = City.find(@event.city_id)
+        render 'api/cities/show'
       else
         render json: @event.errors.full_messages
       end
@@ -45,8 +45,8 @@ class Api::EventsController < ApplicationController
       if @event.update_attributes(event_params)
         @join = current_user.joins.find_by(event_id: params[:id])
         @join.destroy
-        @events = Event.all
-        render :index
+        @city = City.find(@event.city_id)
+        render 'api/cities/show'
       else
         render json: @event.errors.full_messages
       end

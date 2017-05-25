@@ -1,4 +1,5 @@
 import { RECEIVE_CITIES, RECEIVE_CITY, RECEIVE_ERRORS } from '../actions/cities_action';
+import _ from 'lodash';
 
 const nullCity = [{
   id: "",
@@ -9,11 +10,10 @@ const nullCity = [{
 const citiesReducer = (state = [], action) => {
   switch(action.type){
     case RECEIVE_CITIES:
-      return action.cities
+      return _.values(action.cities)
     case RECEIVE_CITY:
-      return [
-        action.city
-      ]
+      debugger
+      return _.values(action.city)
     default:
       return state;
   }

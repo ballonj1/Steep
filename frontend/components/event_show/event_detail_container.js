@@ -1,26 +1,23 @@
 import { connect } from 'react-redux';
-import EventDetail from './event_detail';
-import { joinEvent, leaveEvent, fetchJoins } from '../../actions/join_actions';
-import { currentUserJoins } from '../../reducers/selectors';
-import { fetchHost } from '../../actions/host_actions';
-import { updateEvent, fetchEvents } from '../../actions/events_actions';
+import { EventDetailWithRouter } from './event_detail';
+import { joinEvent, leaveEvent } from '../../actions/join_actions';
+import { updateEvent } from '../../actions/events_actions';
+import { fetchCity } from '../../actions/cities_action';
 
-const mapStateToProps = ({ session, joins, host }, { event }) => ({
+const mapStateToProps = ({ session, match }, { event }) => ({
   session,
-  event,
-  joins,
-  host
+  event
 });
 
 const mapDispatchToProps = (dispatch) => ({
   joinEvent: (user_id, event_id) => dispatch(joinEvent(user_id, event_id)),
   leaveEvent: (user_id, joined_event_id) => dispatch(leaveEvent(user_id, joined_event_id)),
   fetchJoins: (user_id) => dispatch(fetchJoins(user_id)),
-  fetchEvents: (city_id) => dispatch(fetchEvents(city_id)),
-  updateEvent: (event_id, current_attend) => dispatch(updateEvent(event_id, current_attend))
+  updateEvent: (event_id, current_attend) => dispatch(updateEvent(event_id, current_attend)),
+  fetchCity: (city_id) => dispatch(fetchCity(city_id))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(EventDetail);
+)(EventDetailWithRouter);

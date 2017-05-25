@@ -11,17 +11,13 @@ class EventIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    // if (nextProps.match.params.id !== this.props.match.params.id){
-    //   nextProps.fetchEvents(this.props.match.params.id);
-    // }
+    if (nextProps.match.params.id !== this.props.match.params.id){
+      nextProps.fetchCity(nextProps.match.params.id);
+    }
   }
 
   componentDidMount() {
-    this.props.fetchCity(parseInt(this.props.match.params.id));
-    this.props.fetchEvents(parseInt(this.props.match.params.id));
-    if (this.props.session.currentUser){
-      this.props.fetchJoins(parseInt(this.props.session.currentUser.id));
-    }
+    this.props.fetchCity(this.props.match.params.id);
   }
 
   handleJoin(city_name, city_id, user_id){
@@ -32,14 +28,14 @@ class EventIndex extends React.Component {
   }
 
   renderCityButton(){
-    if (this.props.city.length > 0){
-      if (this.props.session.currentUser.city_id !== this.props.city[0].id){
+    if (this.props.cities.length > 0){
+      if (this.props.session.currentUser.city_id !== this.props.cities[0].id){
         return(
-          <button className="event-button" onClick={this.handleJoin(this.props.city[0].name, this.props.city[0].id, this.props.session.currentUser.id)}>MAKE {this.props.city[0].name.toUpperCase()} YOUR HOME CITY!</button>
+          <button className="event-button" onClick={this.handleJoin(this.props.cities[0].name, this.props.cities[0].id, this.props.session.currentUser.id)}>MAKE {this.props.cities[0].name.toUpperCase()} YOUR HOME CITY!</button>
         )
       } else {
         return(
-          <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>LEAVE {this.props.city[0].name.toUpperCase()}!</button>
+          <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>LEAVE {this.props.cities[0].name.toUpperCase()}!</button>
         )
       }
     }
@@ -47,7 +43,7 @@ class EventIndex extends React.Component {
 
   render(){
     console.log(this.props.match)
-    const { events, city, joins } = this.props
+    const { cities } = this.props
     const button = this.renderCityButton();
     return(
       <div className="event-detail-container">
@@ -59,9 +55,9 @@ class EventIndex extends React.Component {
         </div>
         {button}
         <div className="event-details">
-          {events.map((event, idx) => {
+          {Object.keys((cities.length === 1 && cities[0].events) ? cities[0].events : []).map((key, idx) => {
             return(
-              <EventDetailContainer key={idx} event={event} />
+              <EventDetailContainer key={idx} event={cities[0].events[key]} />
             )
           })}
         </div>
