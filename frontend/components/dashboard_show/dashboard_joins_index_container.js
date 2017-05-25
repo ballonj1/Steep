@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchJoins } from '../../actions/join_actions';
-import DashboardJoinsIndex from './dashboard'
+import DashboardJoinsIndex from './dashboard_joins_index';
 
 const mapStateToProps = ({ session, joins }) => ({
   session,

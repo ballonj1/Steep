@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchHosts } from '../../actions/host_actions';
-import DashboardHostsIndex from './dashboard_hosts';
+import DashboardHostsIndex from './dashboard_hosts_index';
 
 const mapStateToProps = ({ session, hosts }) => ({
   session,

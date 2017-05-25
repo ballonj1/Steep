@@ -16,7 +16,7 @@ const joinReducer = (state = {}, action) => {
       const newJoins = _.merge({}, state, action.joins);
       return _.values(newJoins);
     default:
-      return state;
+      return _.values(state);
   }
 };
 

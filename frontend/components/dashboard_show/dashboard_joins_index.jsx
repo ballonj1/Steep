@@ -1,5 +1,5 @@
 import React from 'react';
-import DashboardJoinsDetail from 'dashboard_joins_detail';
+import DashboardJoinsDetail from './dashboard_joins_detail';
 
 class DashboardJoinsIndex extends React.Component {
   constructor(props){
@@ -12,7 +12,8 @@ class DashboardJoinsIndex extends React.Component {
   }
 
   render(){
-    const joins = this.props.joins.map((join) => <DashboardJoinsDetail join={join} /> )
+    debugger
+    const joins = this.props.joins.map((join) => <DashboardJoinsDetail key={join.id} join={join} /> )
     return(
       <div className="dashboard-joins-index">
         {joins}

@@ -9,7 +9,7 @@ const hostReducer = (state = {}, action) => {
       const newHosts = _.merge({}, state, {[action.host.id]: action.host})
       return _.values(newHosts);
     default:
-      return state;
+      return _.values(state);
   }
 }
 

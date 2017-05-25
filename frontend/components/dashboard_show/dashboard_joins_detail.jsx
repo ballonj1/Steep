@@ -1,11 +1,11 @@
-import { connect } from 'react-redux';
-import DashboardJoinsDetail from './dashboard_joins_detail';
+import React from 'react';
 
-const mapStateToProps = ({ join }) => ({
-  join
-});
+class DashboardJoinsDetail extends React.Component {
+  render(){
+    return(
+      <p>JOINS DETAIL</p>
+    )
+  }
+}
 
-export default connect(
-  mapStateToProps,
-  null
-)(DashboardJoinsDetail);
+export default DashboardJoinsDetail;
