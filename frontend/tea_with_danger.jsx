@@ -28,13 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.fetchHosts = fetchHosts;
+window.fetchJoins = fetchJoins;
 window.createHost = createHost;
 window.createEvent = createEvent;
 window.updateEvent = updateEvent;
 window.updateUserCity = updateUserCity;
 window.updateUser = updateUser;
 window.fetchHost = fetchHost;
-window.fetchJoins = fetchJoins;
 window.leaveEvent = leaveEvent;
 window.joinEvent = joinEvent;
 window.fetchCity = fetchCity;

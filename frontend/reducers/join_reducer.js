@@ -11,10 +11,11 @@ const joinReducer = (state = {}, action) => {
       const updatedJoins = withoutJoin.filter((join) => {
         return join.event_id !== action.join.event_id
       });
+      debugger
       return updatedJoins;
     case RECEIVE_JOINS:
-      const newJoins = _.merge({}, state, action.joins);
-      return _.values(newJoins);
+      // const newJoins = _.merge({}, state, action.joins);
+      return _.values(action.joins);
     default:
       return _.values(state);
   }

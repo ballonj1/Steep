@@ -12,7 +12,7 @@ class DashboardHostsIndex extends React.Component {
   }
 
   render(){
-    const hosts = this.props.hosts.map((host) => <DashboardHostsDetail key={host.id} host={host}/>)
+    const hosts = this.props.hosts.map((host, idx) => <DashboardHostsDetail key={idx} host={host}/>)
     return(
       <div className="dashboard-hosts">
         {hosts}

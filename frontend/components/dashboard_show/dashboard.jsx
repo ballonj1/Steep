@@ -7,8 +7,10 @@ class Dashboard extends React.Component {
   render(){
     return(
       <div className="dashboard">
-        <DashboardJoinsIndexContainer />
-        <DashboardHostsIndexContainer />
+        <div className="dashboard-index">
+          <DashboardJoinsIndexContainer />
+          <DashboardHostsIndexContainer />
+        </div>
       </div>
     )
   }
