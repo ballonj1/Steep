@@ -7,10 +7,15 @@ class DashboardHostsIndex extends React.Component {
 
   }
 
+  componentDidMount(){
+    this.props.fetchHosts(this.props.session.currentUser.id)
+  }
+
   render(){
+    const hosts = this.props.hosts.map((host) => <DashboardHostsDetail host={host}/>)
     return(
       <div className="dashboard-hosts">
-
+        {hosts}
       </div>
     )
   }
