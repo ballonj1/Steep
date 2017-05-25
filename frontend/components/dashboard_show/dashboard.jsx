@@ -1,10 +1,15 @@
 import React from 'react';
+import DashboardJoinsIndex from './dashboard_joins';
+import DashboardHostsIndex from './dashboard_hosts';
 
 class Dashboard extends React.Component {
 
   render(){
     return(
-      <p>another one</p>
+      <div className="dashboard">
+        <DashboardJoinsIndex />
+        <DashboardHostsIndex />
+      </div>
     )
   }
 }

@@ -17,7 +17,6 @@ class EventIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.props.fetchCity(parseInt(this.props.match.params.id));
     this.props.fetchEvents(parseInt(this.props.match.params.id));
     if (this.props.session.currentUser){

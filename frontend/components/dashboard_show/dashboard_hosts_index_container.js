@@ -1,20 +1,17 @@
 import { connect } from 'react-redux';
-import { fetchJoins } from '../../actions/join_actions';
 import { fetchHosts } from '../../actions/host_actions';
-import Dashboard from './dashboard'
+import DashboardHostsIndex from './dashboard_hosts';
 
-const mapStateToProps = ({ session, joins, hosts }) => ({
+const mapStateToProps = ({ session, hosts }) => ({
   session,
-  joins,
   hosts
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  fetchJoins: (user_id) => dispatch(fetchJoins(user_id)),
   fetchHosts: (user_id) => dispatch(fetchHosts(user_id))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Dashboard)
+)(DashboardHostsIndex);
