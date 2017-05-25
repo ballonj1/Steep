@@ -34,7 +34,7 @@ class CitiesDetail extends React.Component {
           <EventIndexContainer />
         </div>
         <div className="host-button-container">
-          <Link className="host-button" to={`/cities/${cities.length > 1 ? cities[0].id : 0}/hosting`}>HOST AN EVENT IN {cities.length > 1 ? cities[0].name.toUpperCase() : ""}</Link>
+          <Link className="host-button" to={`/cities/${cities.length === 1 ? cities[0].id : 0}/hosting`}>HOST AN EVENT IN {cities.length === 1 ? cities[0].name.toUpperCase() : ""}</Link>
         </div>
       </div>
     )

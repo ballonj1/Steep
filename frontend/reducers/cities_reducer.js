@@ -12,7 +12,6 @@ const citiesReducer = (state = [], action) => {
     case RECEIVE_CITIES:
       return _.values(action.cities)
     case RECEIVE_CITY:
-      debugger
       return _.values(action.city)
     default:
       return state;
