@@ -17,6 +17,9 @@ const signedInNav = (signOut, signedIn, session) => {
             <div>
               <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
             </div>
+            <div>
+              <NavLink className="nav-routes" to="/dashboard">DASHBOARD</NavLink>
+            </div>
             <button className="nav-emphasis nav-routes" onClick={signOut}>SIGN OUT</button>
           </div>
         </nav>

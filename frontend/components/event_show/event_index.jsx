@@ -11,12 +11,14 @@ class EventIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if (nextProps.events !== this.props.events){
+    if (nextProps.events.length !== this.props.events.length){
       nextProps.fetchEvents(parseInt(this.props.match.params.id));
     }
   }
 
   componentDidMount() {
+    debugger
+    this.props.fetchCity(parseInt(this.props.match.params.id));
     this.props.fetchEvents(parseInt(this.props.match.params.id));
     if (this.props.session.currentUser){
       this.props.fetchJoins(parseInt(this.props.session.currentUser.id));

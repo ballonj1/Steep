@@ -55,9 +55,9 @@ constructor(props){
       <div className="event-container-and-button">
         <div className="event-container">
           <p className="event-date">{event.date}</p>
-          <p className="event-time">{event.time}</p>
-          <p className="event-address">{event.address}</p>
-          <p className="event-description">{event.description}</p>
+          <p className="event-time">Time: {event.time}</p>
+          <p className="event-address">Address: {event.address}</p>
+          <p className="event-description">Description: {event.description}</p>
           <hr></hr>
           <p className="event-spots-left">Spots Left: {event.max_attend - event.current_attend}</p>
         </div>
