@@ -33,7 +33,7 @@ class Api::EventsController < ApplicationController
   def update
     new_attend = params[:event][:current_attend].to_i
     @event = Event.find_by(id: params[:id])
-    if (@event.current_attend < new_attend) && new_attend < @event.max_attend
+    if (@event.current_attend < new_attend) && new_attend <= @event.max_attend
       if @event.update_attributes(event_params)
         current_user.joins.create(user_id: current_user.id, event_id: @event.id)
         @events = Event.all
