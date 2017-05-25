@@ -10,6 +10,7 @@ import { updateUser, updateUserCity } from './actions/user_actions';
 import { updateEvent } from './util/events_util';
 import { createEvent } from './actions/events_actions';
 import { createHost, fetchHosts } from './actions/host_actions';
+import { deleteEvent } from './util/events_util';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDom.render(<Root store={store} />, root);
 });
 
+window.deleteEvent = deleteEvent;
 window.fetchHosts = fetchHosts;
 window.fetchJoins = fetchJoins;
 window.createHost = createHost;

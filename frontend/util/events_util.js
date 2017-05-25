@@ -20,3 +20,10 @@ export const createEvent = ({ event }) => (
     data: {event}
   })
 )
+
+export const destroyEvent = (event_id) => (
+  $.ajax({
+    method: "DELETE",
+    url: `/api/events/${event_id}`
+  })
+)

@@ -53,7 +53,7 @@ class Api::EventsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @event = Event.find_by(id: params[:id])
     @event.destroy
     render :show

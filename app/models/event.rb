@@ -3,7 +3,7 @@ class Event < ApplicationRecord
   :max_attend, presence: true
 
   has_many :joins, dependent: :destroy
+  has_one :host, dependent: :destroy
   has_many :users, through: :joins
   belongs_to :city
-  has_one :host, dependent: :destroy
 end
