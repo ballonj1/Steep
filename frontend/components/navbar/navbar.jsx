@@ -2,7 +2,8 @@ import React from 'react';
 import { NavLink, Route, Link } from 'react-router-dom';
 
 
-const signedInNav = (signOut, signedIn, session) => {
+const signedInNav = (signOut, signedIn, session, fetchEvents) => {
+
   if (signedIn && session.currentUser) {
     return (
       <header className="main-nav">
@@ -13,7 +14,7 @@ const signedInNav = (signOut, signedIn, session) => {
         </nav>
         <nav className="right-nav">
           <div className="right-nav-contents">
-            {(session.currentUser && session.currentUser.city_name) ? (<div><NavLink className="nav-routes" to={`/cities/${session.currentUser.city_id}`}>{session.currentUser.city_name.toUpperCase()}</NavLink></div>) : ""}
+            {(session.currentUser && session.currentUser.city_name) ? (<div><NavLink onClick={() => fetchEvents(session.currentUser.city_id) } className="nav-routes" to={`/cities/${session.currentUser.city_id}`}>{session.currentUser.city_name.toUpperCase()}</NavLink></div>) : ""}
             <div>
               <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
             </div>
@@ -53,8 +54,8 @@ const signedOutNav = (signedIn, session) => {
   }
 }
 
-const Navbar = ({ signedIn, signOut, session }) => (
-  (signedIn) ? signedInNav(signOut, signedIn, session) : signedOutNav(signedIn, session)
+const Navbar = ({ signedIn, signOut, session, fetchEvents }) => (
+  (signedIn) ? signedInNav(signOut, signedIn, session, fetchEvents) : signedOutNav(signedIn, session)
 )
 
 export default Navbar;

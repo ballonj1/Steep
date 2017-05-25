@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { signIn, signUp, signOut } from '../../actions/session_actions';
 import Navbar from './navbar';
+import { fetchEvents } from '../../actions/events_actions';
 
 const mapStateToProps = ({ session }) => ({
   session,
@@ -8,7 +9,8 @@ const mapStateToProps = ({ session }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  signOut: () => dispatch(signOut())
+  signOut: () => dispatch(signOut()),
+  fetchEvents: (id) => dispatch(fetchEvents(id))
 });
 
 export default connect(

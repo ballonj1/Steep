@@ -11,9 +11,9 @@ class EventIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if (nextProps.events.length !== this.props.events.length){
-      nextProps.fetchEvents(parseInt(this.props.match.params.id));
-    }
+    // if (nextProps.match.params.id !== this.props.match.params.id){
+    //   nextProps.fetchEvents(this.props.match.params.id);
+    // }
   }
 
   componentDidMount() {
@@ -46,6 +46,7 @@ class EventIndex extends React.Component {
   }
 
   render(){
+    console.log(this.props.match)
     const { events, city, joins } = this.props
     const button = this.renderCityButton();
     return(
