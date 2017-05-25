@@ -10,6 +10,12 @@ class EventIndex extends React.Component {
     this.renderCityButton = this.renderCityButton.bind(this);
   }
 
+  componentWillReceiveProps(nextProps){
+    if (nextProps.events !== this.props.events){
+      nextProps.fetchEvents(parseInt(this.props.match.params.id));
+    }
+  }
+
   componentDidMount() {
     this.props.fetchEvents(parseInt(this.props.match.params.id));
     if (this.props.session.currentUser){
