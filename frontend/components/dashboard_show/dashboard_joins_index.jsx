@@ -12,7 +12,6 @@ class DashboardJoinsIndex extends React.Component {
   }
 
   render(){
-    debugger
     const joins = this.props.joins.map((join) => <DashboardJoinsDetail key={join.id} join={join} /> )
     return(
       <div className="dashboard-joins-index">
