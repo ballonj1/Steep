@@ -15,6 +15,9 @@
   width: 200px;
   display: flex;
   flex-direction: column;
+  box-shadow: 10px 10px 5px #888888;
+  justify-content: center;
+  align-items: center
 }
 
 .event-spots-left {
@@ -22,7 +25,19 @@
 }
 
 .event-info {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.event-container-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #DDD;
+  padding: 10px;
 }
 
 .event-details {
@@ -54,6 +69,7 @@
 }
 
 .event-address {
+  display: flex;
   color: #929292;
   line-height: 1em;
 }
