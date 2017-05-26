@@ -3,8 +3,9 @@ import CitiesDetail from './cities_detail';
 import { fetchCity } from '../../actions/cities_action';
 
 
-const mapStateToProps = ({ cities, joins }) => ({
-  cities
+const mapStateToProps = ({ cities, session }) => ({
+  cities,
+  session
 });
 
 const mapDispatchToProps = (dispatch) => ({

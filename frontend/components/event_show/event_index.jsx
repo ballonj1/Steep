@@ -43,6 +43,7 @@ class EventIndex extends React.Component {
     }
   }
 
+
   render(){
     console.log(this.props.match)
     const { cities } = this.props
@@ -54,6 +55,7 @@ class EventIndex extends React.Component {
             Tea Time is a conversation between a few people who know nothing about each other.
           </h2>
           <p>You'll never leave without questions, new perspectives, and the reminder that we're far more the same than we are different</p>
+
         </div>
         {button}
         <div className="event-details">

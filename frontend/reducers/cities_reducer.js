@@ -4,12 +4,26 @@ import _ from 'lodash';
 const nullCity = [{
   id: "",
   name: "",
-  image_url: ""
+  image_url: "",
+  events: {
+    "" : {
+      id: "",
+      date: "",
+      time: "",
+      address: "",
+      description: "",
+      host_id: "",
+      city_id: "",
+      max_attend: "",
+      current_attend: "",
+      event_full: ""
+    }
+  }
 }];
 
-//change nullCity 
+//change nullCity
 
-const citiesReducer = (state = [], action) => {
+const citiesReducer = (state = nullCity, action) => {
   switch(action.type){
     case RECEIVE_CITIES:
       return _.values(action.cities)

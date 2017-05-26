@@ -35,23 +35,25 @@ constructor(props){
   }
 
   buttonRender(){
-    if (this.props.event.hosting) {
-      return ""
-    }
+    if (this.props.session.currentUser){
+      if (this.props.event.hosting) {
+        return ""
+      }
 
-    if (this.props.event.attending) {
-      return (
-        <button className="event-button" onClick={this.handleLeave(this.props.event.id, this.props.event.current_attend)}>LEAVE EVENT</button>
-      )
-    } else {
-      if (this.props.event.event_full){
+      if (this.props.event.attending) {
         return (
-          <button className="full-event-button">FULL EVENT</button>
+          <button className="event-button" onClick={this.handleLeave(this.props.event.id, this.props.event.current_attend)}>LEAVE EVENT</button>
         )
       } else {
-        return (
-          <button className="event-button" onClick={this.handleJoin(this.props.event.id, this.props.event.current_attend)}>JOIN EVENT</button>
-        )
+        if (this.props.event.event_full){
+          return (
+            <button className="full-event-button">FULL EVENT</button>
+          )
+        } else {
+          return (
+            <button className="event-button" onClick={this.handleJoin(this.props.event.id, this.props.event.current_attend)}>JOIN EVENT</button>
+          )
+        }
       }
     }
   }
