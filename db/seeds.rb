@@ -20,6 +20,18 @@ User.create(first_name: "Grey", last_name: "Keith", email: "email8@gmail.com", p
 User.create(first_name: "Sam", last_name: "Faber-Manning", email: "email9@gmail.com", password: "password")
 User.create(first_name: "Monte", last_name: "Jiran", email: "email10@gmail.com", password: "password")
 
+User.create(first_name: "John", last_name: "Ballon", email: "email@gmail.com", password: "password")
+User.create(first_name: "Elliot", last_name: "Humphrey", email: "email1@gmail.com", password: "password")
+User.create(first_name: "Gary", last_name: "Yeh", email: "email2@gmail.com", password: "password")
+User.create(first_name: "Eric", last_name: "Wong", email: "email3@gmail.com", password: "password")
+User.create(first_name: "Robin", last_name: "Wilborn", email: "email4@gmail.com", password: "password")
+User.create(first_name: "Sean", last_name: "Perfecto", email: "email5@gmail.com", password: "password")
+User.create(first_name: "Vilya", last_name: "Levitskiy", email: "email6@gmail.com", password: "password")
+User.create(first_name: "Mark", last_name: "Azuolas", email: "email7@gmail.com", password: "password")
+User.create(first_name: "Grey", last_name: "Keith", email: "email8@gmail.com", password: "password")
+User.create(first_name: "Sam", last_name: "Faber-Manning", email: "email9@gmail.com", password: "password")
+User.create(first_name: "Monte", last_name: "Jiran", email: "email10@gmail.com", password: "password")
+
 City.destroy_all
 
 City.create(name: "Perth", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495302501/image.adapt.1663.medium_as661s.jpg")
@@ -40,10 +52,44 @@ Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Ji
 Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
 Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
 
-Join.destroy_all
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
 
-Join.create(user_id: 1, event_id: 1)
-Join.create(user_id: 2, event_id: 1)
-Join.create(user_id: 3, event_id: 1)
-Join.create(user_id: 4, event_id: 1)
-Join.create(user_id: 5, event_id: 1)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
+
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
+
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
+
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
+
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)
+
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Hip, compact, and urban.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Vintage and classy.", host_id: 1, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Industrial decor with fast-moving baristas at the core.", host_id: 3, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "9:30 AM", address: "1-17-23 Meguro, Meguro-ku", description: "Friendly and open, but deadly serious about tea.", host_id: 5, city_id: 5, max_attend: 6)

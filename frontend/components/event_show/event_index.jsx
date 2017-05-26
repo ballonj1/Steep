@@ -45,7 +45,6 @@ class EventIndex extends React.Component {
 
 
   render(){
-    console.log(this.props.match)
     const { cities } = this.props
     const button = this.renderCityButton();
     return(
