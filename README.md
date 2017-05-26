@@ -8,6 +8,11 @@ On the back-end, Steep uses Rails and PostgreSQL to manage and access the data t
 
 ## Application Features & Implementation
 
+###Home Page
+The home page provides information to the user about why they should be using Steep.
+
+![homepage](docs/wireframes/homepage.png)
+
 ### Events
 
 The event detail component displays the information saved as a single entry in the database's events table.  In the database, each event is required to have a `date`, `title`, `address`, `description`, `host_id`, `city_id`, `max_attend`, and `current_attend`. When logged in users choose to join an event that still has spots available, an entry in the joins table is created using the id of the current user the id of the event targeted event, both of which are accessible because they were explicitly included in the state. The event is subsequently located and updated on the back-end by incrementing the event's `current_attend` and saving the updated event to the database.
@@ -63,10 +68,14 @@ const citiesReducer = (state = nullCity, action) => {
 }
 ```
 
+### Cities Index
+Provides the user with a list of all of the cities that Steep participates.
+
+![image of home page](docs/wireframes/citiesIndex.png)
+
 ### Dashboard
 
 The Dashboard allows a logged in user to view all of the events that they are signed up for or are hosting.  Like the joins table on the back-end, the hosts table also includes a `user_id` and an `event_id` that link a user to the event that they created.  Once I realized how much cleaner it is to retrieve and return relevant information on the back-end, I refactored my host and join views on the backend to utilize the association between a particular host or join and event.  I then used Jbuilder to include the event that corresponded to the host or join that was requested from the front-end.  This way I was able to access the event information and place it within an event detail container that gives the user the ability to cancel the event if they are the host, or to leave the event if they are currently attending.
-
 
 
 ## Future Directions for the Project
