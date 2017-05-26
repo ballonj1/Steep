@@ -21,8 +21,6 @@ const nullCity = [{
   }
 }];
 
-//change nullCity
-
 const citiesReducer = (state = nullCity, action) => {
   switch(action.type){
     case RECEIVE_CITIES:
