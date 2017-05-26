@@ -5,15 +5,13 @@ import { Route, Link } from 'react-router-dom';
 class CitiesDetail extends React.Component {
 
   componentWillReceiveProps(nextProps){
-    if (nextProps.cities.length !== 1 && (nextProps.match.params.id !== this.props.match.params.id)) {
+    if (nextProps.match.params.id !== this.props.match.params.id) {
       this.props.fetchCity(this.props.match.params.id)
     }
   }
 
   componentDidMount() {
-    if (this.props.cities.length < 1) {
-      this.props.fetchCity(this.props.match.params.id)
-    }
+    this.props.fetchCity(this.props.match.params.id)
   }
 
   render(){
@@ -24,7 +22,6 @@ class CitiesDetail extends React.Component {
     // const cityId = city.length > 0 ? city[0].id : "";
     // const image_url = city.length > 0 ? city[0].image_url : "";
     // const city_name = city.length > 0 ? city[0].name : "";
-
     return(
       <div className="city-detail-container">
         <div className="hero-image-container">

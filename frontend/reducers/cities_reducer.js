@@ -7,6 +7,8 @@ const nullCity = [{
   image_url: ""
 }];
 
+//change nullCity 
+
 const citiesReducer = (state = [], action) => {
   switch(action.type){
     case RECEIVE_CITIES:

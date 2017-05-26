@@ -14,7 +14,7 @@ const signedInNav = (signOut, signedIn, session, fetchEvents) => {
         </nav>
         <nav className="right-nav">
           <div className="right-nav-contents">
-            {(session.currentUser && session.currentUser.city_name) ? (<div><NavLink onClick={() => fetchEvents(session.currentUser.city_id) } className="nav-routes" to={`/cities/${session.currentUser.city_id}`}>{session.currentUser.city_name.toUpperCase()}</NavLink></div>) : ""}
+            {(session.currentUser && session.currentUser.city_name) ? (<div><NavLink onClick={() => fetchCity(session.currentUser.city_id) } className="nav-routes" to={`/cities/${session.currentUser.city_id}`}>{session.currentUser.city_name.toUpperCase()}</NavLink></div>) : ""}
             <div>
               <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
             </div>
