@@ -60,7 +60,7 @@ class SessionForm extends React.Component {
     return(
       <div className="sign-in-form-container">
         <form onSubmit={this.handleSubmit} className="sign-in-form-box">
-          <h2>Hey Stranger! Ready for some danger?</h2>
+          <h2>Hey Stranger!</h2>
           <p>It's good to have you back. Sign in here and sign up for
           your next tea time!</p>
           {this.renderErrors()}
@@ -79,7 +79,7 @@ class SessionForm extends React.Component {
                 placeholder="Password"
               />
             <br/>
-            <input type="submit" value="ENTER IF YOU DARE" />
+            <input type="submit" value="LET'S GET TEA" />
             <button className="guest-button" onClick={this.demosignIn}>GUEST SIGN IN</button>
           </div>
         </form>

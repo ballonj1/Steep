@@ -37,7 +37,9 @@ constructor(props){
   buttonRender(){
     if (this.props.session.currentUser){
       if (this.props.event.hosting) {
-        return ""
+        return (
+          <button className="full-event-button">YOU'RE HOSTING</button>
+        )
       }
 
       if (this.props.event.attending) {

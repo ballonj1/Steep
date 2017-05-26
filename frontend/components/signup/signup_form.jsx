@@ -82,7 +82,7 @@ class signUpForm extends React.Component {
                 placeholder="Password"
               />
             <br/>
-            <input type="submit" value="LET'S GET DANGEROUS" />
+            <input type="submit" value="LET'S GET TEA" />
           </div>
         </form>
       </div>

@@ -25,7 +25,7 @@ class CitiesDetail extends React.Component {
       )
     } else {
       return (
-        <Link className="host-button" to={"/signin"}>SIGN IN TO HOST/JOIN EVENTS!</Link>
+        <Link className="host-button" to={"/signin"}>SIGN IN TO HOST/JOIN EVENTS</Link>
       )
     }
   }

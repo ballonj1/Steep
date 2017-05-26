@@ -4,8 +4,8 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => (
   <div className="footer-container">
     <div className="nav-route-links">
-      <NavLink className="nav-routes" to="/about">ABOUT</NavLink>
       <NavLink className="nav-routes" to="/cities">CITIES</NavLink>
+      <NavLink className="nav-routes" to="/">HOME</NavLink>
     </div>
     <div className="brief-about">
       <p className="footer-p">
