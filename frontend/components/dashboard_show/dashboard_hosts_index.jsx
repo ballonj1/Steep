@@ -14,11 +14,11 @@ class DashboardHostsIndex extends React.Component {
 
   dashboardText(){
     if (this.props.hosts.length > 0){
-      return <h2 className="dashboard-text">Hosted Events</h2>
+      return <h2 className="dashboard-text">Hosted Teatimes</h2>
     } else {
       return (
         <div>
-          <h2 className="dashboard-text">No Hosted Events</h2>
+          <h2 className="dashboard-text">No Hosted Teatimes</h2>
           {(this.props.session.currentUser.city_id) ? <Link className='host-button' to={`/cities/${this.props.session.currentUser.city_id}/hosting`}>HOST TEATIME</Link> : ""}
         </div>
       )
