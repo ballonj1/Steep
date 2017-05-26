@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import { signIn, signUp, signOut } from '../../actions/session_actions';
-import Navbar from './navbar';
+import { NavbarWithRouter } from './navbar';
 import { fetchCity } from '../../actions/cities_action';
 
-const mapStateToProps = ({ session }) => ({
+const mapStateToProps = ({ session, history }) => ({
   session,
-  signedIn: Boolean(session.currentUser)
+  signedIn: Boolean(session.currentUser),
+  history
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -16,4 +17,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Navbar)
+)(NavbarWithRouter)

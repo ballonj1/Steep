@@ -1,8 +1,16 @@
 import React from 'react';
-import { NavLink, Route, Link } from 'react-router-dom';
+import { NavLink, Route, Link, withRouter } from 'react-router-dom';
 
 
-const signedInNav = (signOut, signedIn, session, fetchEvents) => {
+const signedInNav = (signOut, signedIn, session, fetchEvents, history) => {
+
+  const handleSignOut = (e) => {
+    return e => {
+      e.preventDefault()
+      signOut()
+      history.push('/')
+    }
+  };
 
   if (signedIn && session.currentUser) {
     return (
@@ -21,7 +29,7 @@ const signedInNav = (signOut, signedIn, session, fetchEvents) => {
             <div>
               <NavLink className="nav-routes" to="/dashboard">DASHBOARD</NavLink>
             </div>
-            <button className="nav-emphasis nav-routes" onClick={signOut}>SIGN OUT</button>
+            <button className="nav-emphasis nav-routes" onClick={handleSignOut()}>SIGN OUT</button>
           </div>
         </nav>
       </header>
@@ -54,8 +62,8 @@ const signedOutNav = (signedIn, session) => {
   }
 }
 
-const Navbar = ({ signedIn, signOut, session, fetchEvents }) => (
-  (signedIn) ? signedInNav(signOut, signedIn, session, fetchEvents) : signedOutNav(signedIn, session)
+const Navbar = ({ signedIn, signOut, session, fetchEvents, history }) => (
+  (signedIn) ? signedInNav(signOut, signedIn, session, fetchEvents, history) : signedOutNav(signedIn, session)
 )
 
-export default Navbar;
+export const NavbarWithRouter = withRouter(Navbar);
