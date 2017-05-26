@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import DashboardJoinsDetail from './dashboard_joins_detail';
 import { leaveEvent } from '../../actions/join_actions';
 
-const mapStateToProps = ({ join }) => ({
+const mapStateToProps = ({ session },{ join }) => ({
+  session,
   join
 });
 

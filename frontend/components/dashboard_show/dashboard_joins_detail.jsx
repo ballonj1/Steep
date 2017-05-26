@@ -1,6 +1,19 @@
 import React from 'react';
 
 class DashboardJoinsDetail extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.handleLeave = this.handleLeave.bind(this);
+  }
+
+  handleLeave(user_id, event_id){
+    return e => {
+      e.preventDefault();
+      return this.props.leaveEvent(user_id, event_id);
+    }
+  }
+
   render(){
     return(
       <div className="event-container-and-button">
@@ -12,6 +25,7 @@ class DashboardJoinsDetail extends React.Component {
           <hr></hr>
           <p className="event-spots-left">Spots Left: {this.props.join.event.max_attend - this.props.join.event.current_attend}</p>
         </div>
+        <button className="event-button" onClick={this.handleLeave(this.props.join.user_id, this.props.join.event_id)}>LEAVE EVENT</button>
       </div>
     )
   }

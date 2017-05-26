@@ -1,6 +1,19 @@
 import React from 'react';
 
 class DashboardHostsDetail extends React.Component {
+  constructor(props){
+    super(props)
+
+    this.handleDestroy.bind(this)
+  }
+
+  handleDestroy(user_id, event_id){
+    return e => {
+      e.preventDefault()
+      this.props.destroyEvent(user_id, event_id)
+    }
+  }
+
   render(){
     return(
       <div className="event-container-and-button">
@@ -12,6 +25,7 @@ class DashboardHostsDetail extends React.Component {
           <hr></hr>
           <p className="event-spots-left">Spots Left: {this.props.host.event.max_attend - this.props.host.event.current_attend}</p>
         </div>
+        <button className="event-button" onClick={this.handleDestroy(this.props.join.user_id, this.props.join.event_id)}>CANCEL EVENT</button>
       </div>
     )
   }

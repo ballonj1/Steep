@@ -9,8 +9,10 @@ class Api::JoinsController < ApplicationController
   end
 
   def destroy
-    @join = Join.find_by(id: params[:id])
+    @join = Join.find_by(user_id: params[:join][:user_id], event_id: params[:join][:event_id])
     @join.destroy
+    @event = Event.find_by(id: @join.event_id)
+    @event.update_attribute(:current_attend, (@event.current_attend - 1))
     render :show
   end
 
