@@ -1,17 +1,48 @@
-.dashboard-index {
+.dashboard-index-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-index-1 {
+  display: flex;
+  width: 85%;
+  border-bottom: 1px solid gray;
+  padding: 20px 20px;
+}
+
+.dashboard-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-content: flex-end;
+}
+
+.dashboard-content {
+  display: flex;
+  flex: 3;
+  flex-wrap: wrap;
+}
+
+.dashboard-text {
+  flex: 1;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
   background-color: #FAF6E8;
 }
 
-.dashboard-joins-index {
+.dashboard-index {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  width: 85%;
+  padding: 20px 20px;
 }
 
-.dashboard-hosts-index {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.dashboard-hr {
+  border: 0px;
+  height: 1px;
+  background: black;
 }

@@ -14,8 +14,13 @@ class DashboardHostsIndex extends React.Component {
   render(){
     const hosts = this.props.hosts.map((host, idx) => <DashboardHostsDetail key={idx} host={host}/>)
     return(
-      <div className="dashboard-hosts">
-        {hosts}
+      <div className="dashboard-index">
+        <div className="dashboard-info">
+          <h1 className="dashboard-text">Events you're hosting!</h1>
+        </div>
+        <div className="dashboard-content">
+          {hosts}
+        </div>
       </div>
     )
   }
