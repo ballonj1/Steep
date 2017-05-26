@@ -12,3 +12,11 @@ export const createHost = (user_id, event_id) => (
     data: {host: {user_id, event_id}}
   })
 )
+
+export const destroyHost = (host_id, user_id, event_id) => (
+  $.ajax({
+    method: "DELETE",
+    url: `/api/hosts/${host_id}`,
+    data: {host: {user_id, event_id}}
+  })
+)

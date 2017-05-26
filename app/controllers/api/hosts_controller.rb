@@ -16,7 +16,8 @@ class Api::HostsController < ApplicationController
 
   def destroy
     @host = Host.find_by(id: params[:id])
-    @host.destroy
+    @event = Event.find_by(id: params[:host][:event_id])
+    @event.destroy
     render :show
   end
 

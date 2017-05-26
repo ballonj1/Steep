@@ -1,7 +1,7 @@
-json.set! @host.id do
-  json.id @host.id
-  json.user_id @host.user_id
-  json.event_id @host.event_id
+json.id @host.id
+json.user_id @host.user_id
+json.event_id @host.event_id
+if @host.event
   json.event do
     json.id @host.event.id
     json.date @host.event.date

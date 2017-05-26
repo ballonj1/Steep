@@ -7,10 +7,10 @@ class DashboardHostsDetail extends React.Component {
     this.handleDestroy.bind(this)
   }
 
-  handleDestroy(user_id, event_id){
+  handleDestroy(host_id, user_id, event_id){
     return e => {
       e.preventDefault()
-      this.props.destroyEvent(user_id, event_id)
+      this.props.destroyHost(host_id, user_id, event_id)
     }
   }
 
@@ -25,7 +25,7 @@ class DashboardHostsDetail extends React.Component {
           <hr></hr>
           <p className="event-spots-left">Spots Left: {this.props.host.event.max_attend - this.props.host.event.current_attend}</p>
         </div>
-        <button className="event-button" onClick={this.handleDestroy(this.props.join.user_id, this.props.join.event_id)}>CANCEL EVENT</button>
+        <button className="event-button" onClick={this.handleDestroy(this.props.host.id, this.props.host.user_id, this.props.host.event_id)}>CANCEL EVENT</button>
       </div>
     )
   }

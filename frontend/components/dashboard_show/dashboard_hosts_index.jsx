@@ -1,22 +1,37 @@
 import React from 'react';
-import DashboardHostsDetail from './dashboard_hosts_detail';
-
+import DashboardHostsDetailContainer from './dashboard_hosts_detail_container';
+import { Link } from 'react-router-dom';
 class DashboardHostsIndex extends React.Component {
   constructor(props){
     super(props)
 
+    this.dashboardText = this.dashboardText.bind(this);
   }
 
   componentDidMount(){
     this.props.fetchHosts(this.props.session.currentUser.id)
   }
 
+  dashboardText(){
+    if (this.props.hosts.length > 0){
+      return <h2 className="dashboard-text">Hosted Events</h2>
+    } else {
+      return (
+        <div>
+          <h2 className="dashboard-text">No Hosted Events</h2>
+          {(this.props.session.currentUser.city_id) ? <Link className='host-button' to={`/cities/${this.props.session.currentUser.city_id}/hosting`}>HOST TEA</Link> : ""}
+        </div>
+      )
+    }
+  }
+
   render(){
-    const hosts = this.props.hosts.map((host, idx) => <DashboardHostsDetail key={idx} host={host}/>)
+    const hosts = this.props.hosts.map((host, idx) => <DashboardHostsDetailContainer key={idx} host={host}/>)
+    const dashboardText = this.dashboardText();
     return(
       <div className="dashboard-index">
         <div className="dashboard-info">
-          <h2 className="dashboard-text">Events you're hosting!</h2>
+          {dashboardText}
         </div>
         <div className="dashboard-content">
           {hosts}
