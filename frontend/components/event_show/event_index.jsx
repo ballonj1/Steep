@@ -28,15 +28,17 @@ class EventIndex extends React.Component {
   }
 
   renderCityButton(){
-    if (this.props.cities.length > 0){
-      if (this.props.session.currentUser.city_id !== this.props.cities[0].id){
-        return(
-          <button className="event-button" onClick={this.handleJoin(this.props.cities[0].name, this.props.cities[0].id, this.props.session.currentUser.id)}>MAKE {this.props.cities[0].name.toUpperCase()} YOUR HOME CITY!</button>
-        )
-      } else {
-        return(
-          <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>LEAVE {this.props.cities[0].name.toUpperCase()}!</button>
-        )
+    if (this.props.session.currentUser){
+      if (this.props.cities.length > 0){
+        if (this.props.session.currentUser.city_id !== this.props.cities[0].id){
+          return(
+            <button className="event-button" onClick={this.handleJoin(this.props.cities[0].name, this.props.cities[0].id, this.props.session.currentUser.id)}>MAKE {this.props.cities[0].name.toUpperCase()} YOUR HOME CITY!</button>
+          )
+        } else {
+          return(
+            <button className="event-button" onClick={this.handleJoin("", "", this.props.session.currentUser.id)}>LEAVE {this.props.cities[0].name.toUpperCase()}!</button>
+          )
+        }
       }
     }
   }
