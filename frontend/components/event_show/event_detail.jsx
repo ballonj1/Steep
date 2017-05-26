@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 class EventDetail extends React.Component {
 constructor(props){
@@ -38,7 +38,7 @@ constructor(props){
     if (this.props.session.currentUser){
       if (this.props.event.hosting) {
         return (
-          <button className="full-event-button">YOU'RE HOSTING</button>
+          <Link to="/dashboard" className="host-button">YOU'RE HOSTING</Link>
         )
       }
 
