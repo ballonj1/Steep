@@ -17,13 +17,17 @@ class DashboardHostsDetail extends React.Component {
   render(){
     return(
       <div className="event-container-and-button">
-        <div className="event-container">
+        <div className="event-container event-info">
           <p className="event-date event-info">{this.props.host.event.date}</p>
-          <p className="event-time event-info">{this.props.host.event.time}</p>
-          <p className="event-address event-info">{this.props.host.event.address}</p>
-          <p className="event-description event-info">{this.props.host.event.description}</p>
+          <div className="event-container-inner">
+            <p className="event-time event-info">{this.props.host.event.time}</p>
+            <p className="event-address event-info">{this.props.host.event.address}</p>
+            <p className="event-description event-info">{this.props.host.event.description}</p>
+          </div>
           <hr></hr>
-          <p className="event-spots-left event-info">SEATS REMAINING: {this.props.host.event.max_attend - this.props.host.event.current_attend}</p>
+          <div>
+            <p className="event-spots-left event-info">SEATS REMAINING: {this.props.host.event.max_attend - this.props.host.event.current_attend}</p>
+          </div>
         </div>
         <button className="event-button" onClick={this.handleDestroy(this.props.host.id, this.props.host.user_id, this.props.host.event_id)}>CANCEL EVENT</button>
       </div>
