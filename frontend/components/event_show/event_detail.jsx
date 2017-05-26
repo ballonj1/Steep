@@ -65,13 +65,13 @@ constructor(props){
     const button = this.buttonRender();
     return(
       <div className="event-container-and-button">
-        <div className="event-container">
-          <p className="event-date">{event.date}</p>
-          <p className="event-time">Time: {event.time}</p>
-          <p className="event-address">Address: {event.address}</p>
-          <p className="event-description">Description: {event.description}</p>
+        <div className="event-container event-info">
+          <p className="event-date event-info">{event.date}</p>
+          <p className="event-time event-info">{event.time}</p>
+          <p className="event-address event-info">{event.address}</p>
+          <p className="event-description event-info">{event.description}</p>
           <hr></hr>
-          <p className="event-spots-left">Spots Left: {event.max_attend - event.current_attend}</p>
+          <p className="event-spots-left event-info">SEATS REMAINING: {event.max_attend - event.current_attend}</p>
         </div>
         {button}
       </div>

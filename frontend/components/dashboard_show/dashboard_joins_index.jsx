@@ -40,7 +40,7 @@ class DashboardJoinsIndex extends React.Component {
         <div className="dashboard-info">
           {dashboardText}
         </div>
-        <div className="dashboard-content">
+        <div className="dashboard-content event-info">
           {joins}
         </div>
       </div>
