@@ -66,15 +66,17 @@ constructor(props){
     return(
       <div className="event-container-and-button">
         <div className="event-container event-info">
-          <p className="event-date event-info">{event.date}</p>
-          <div className="event-container-inner">
-            <p className="event-time event-info">{event.time}</p>
-            <p className="event-address event-info">{event.address}</p>
-            <p className="event-description event-info">{event.description}</p>
-          </div>
-          <hr></hr>
-          <div>
-            <p className="event-spots-left event-info">SEATS REMAINING: {event.max_attend - event.current_attend}</p>
+          <div className="event-container-container">
+            <p className="event-date event-info">{event.date}</p>
+            <div className="event-container-inner">
+              <p className="event-time event-info">{event.time}</p>
+              <p className="event-address event-info">{event.address}</p>
+              <p className="event-description event-info">{event.description}</p>
+            </div>
+            <hr></hr>
+            <div>
+              <p className="event-spots-left event-info">SEATS REMAINING: {event.max_attend - event.current_attend}</p>
+            </div>
           </div>
         </div>
         {button}

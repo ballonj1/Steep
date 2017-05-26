@@ -10,9 +10,9 @@
   margin: 20px 20px 10px 20px;
   background: #FEFEFE;
   border: 1px solid #DDD;
-  padding: 25px;
-  height: 250px;
-  width: 200px;
+  padding: 15px 25px;
+  height: 300px;
+  width: 250px;
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 5px #888888;
@@ -83,6 +83,11 @@
   flex-direction: column;
   align-items: center;
   line-height: 1.5em;
+}
+
+.event-container-container {
+  border: 5px solid #EF6236;
+  padding: 20px;
 }
 
 .event-button {
