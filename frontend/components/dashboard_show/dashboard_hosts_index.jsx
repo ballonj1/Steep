@@ -19,7 +19,7 @@ class DashboardHostsIndex extends React.Component {
       return (
         <div>
           <h2 className="dashboard-text">No Hosted Events</h2>
-          {(this.props.session.currentUser.city_id) ? <Link className='host-button' to={`/cities/${this.props.session.currentUser.city_id}/hosting`}>HOST TEA</Link> : ""}
+          {(this.props.session.currentUser.city_id) ? <Link className='host-button' to={`/cities/${this.props.session.currentUser.city_id}/hosting`}>HOST TEATIME</Link> : ""}
         </div>
       )
     }

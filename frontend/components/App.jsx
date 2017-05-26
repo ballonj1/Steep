@@ -9,6 +9,7 @@ import CitiesIndexContainer from './cities/cities_index_container';
 import CitiesDetailContainer from './cities/cities_detail_container';
 import HostFormContainer from './host/host_form_container';
 import Dashboard from './dashboard_show/dashboard';
+import HomepageContainer from './homepage/homepage_container';
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
         <Route path="/cities/:id" component={CitiesDetailContainer} />
         <Route path="/cities" component={CitiesIndexContainer} />
         <Route path="/dashboard" component={Dashboard} />
+        <Route path="/" component={HomepageContainer} />
       </Switch>
     </div>
     <div className="footer">
