@@ -11,6 +11,7 @@ class signUpForm extends React.Component {
       password: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demosignIn = this.demosignIn.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -46,6 +47,12 @@ class signUpForm extends React.Component {
       </ul>
     )
   };
+
+  demosignIn(e) {
+    e.preventDefault();
+    const user = {user: {email: "email@gmail.com", password: "password"}}
+    this.props.signIn(user).then(() => this.props.history.push('/cities'));
+  }
 
   render() {
     return(
@@ -83,6 +90,7 @@ class signUpForm extends React.Component {
               />
             <br/>
             <input type="submit" value="LET'S GET TEA" />
+            <button className="guest-button" onClick={this.demosignIn}>GUEST SIGN IN</button>
           </div>
         </form>
       </div>
