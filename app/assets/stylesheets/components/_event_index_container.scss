@@ -11,8 +11,22 @@
   background: #FEFEFE;
   border: 1px solid #DDD;
   padding: 15px 25px;
-  height: 300px;
-  width: 250px;
+  height: 325px;
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 10px 5px #888888;
+  justify-content: center;
+  align-items: center
+}
+
+.event-container-1 {
+  margin: 20px 20px 10px 20px;
+  background: #FEFEFE;
+  border: 1px solid #DDD;
+  padding: 35px 25px;
+  height: 325px;
+  width: 275px;
   display: flex;
   flex-direction: column;
   box-shadow: 10px 10px 5px #888888;
@@ -88,6 +102,8 @@
 .event-container-container {
   border: 5px solid #EF6236;
   padding: 20px;
+  height:300px;
+  width: 250px;
 }
 
 .event-button {
