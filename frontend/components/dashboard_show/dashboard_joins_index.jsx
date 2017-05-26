@@ -16,7 +16,7 @@ class DashboardJoinsIndex extends React.Component {
     return(
       <div className="dashboard-index-1">
         <div className="dashboard-info">
-          <h1 className="dashboard-text">Events you've joined!</h1>
+          <h2 className="dashboard-text">Events you've joined!</h2>
         </div>
         <div className="dashboard-content">
           {joins}

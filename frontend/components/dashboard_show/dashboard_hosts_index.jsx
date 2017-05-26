@@ -16,7 +16,7 @@ class DashboardHostsIndex extends React.Component {
     return(
       <div className="dashboard-index">
         <div className="dashboard-info">
-          <h1 className="dashboard-text">Events you're hosting!</h1>
+          <h2 className="dashboard-text">Events you're hosting!</h2>
         </div>
         <div className="dashboard-content">
           {hosts}
