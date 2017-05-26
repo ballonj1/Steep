@@ -46,6 +46,12 @@ City.create(name: "New York", image_url: "http://res.cloudinary.com/dzbwfwz4j/im
 
 Event.destroy_all
 
+Event.create(date: Faker::Date.forward(50), time: "8:45 AM", address: "16a Cloisters Arcade,, 865 Hay St, Perth WA 6000, Australia", description: "Come relax with strangers.", host_id: 2, city_id: 1, max_attend: 4)
+Event.create(date: Faker::Date.forward(50), time: "11:40 AM", address: "16 Gordon St, West Perth WA 6005, Australia", description: "Great venue.", host_id: 2, city_id: 1, max_attend: 5)
+Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "172 St Georges Terrace, Perth WA 6000, Australia", description: "They have the best tea in town.", host_id: 2, city_id: 1, max_attend: 3)
+Event.create(date: Faker::Date.forward(50), time: "4:10 PM", address: "125 St Georges Terrace, Perth WA 6000, Australia", description: "Rain or shine!.", host_id: 1, city_id: 1, max_attend: 8)
+Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: " 90 King St, Perth WA 6000, Australia", description: "They make great sandwiches too!", host_id: 1, city_id: 1, max_attend: 6)
+
 Event.create(date: Faker::Date.forward(50), time: "8:55 AM", address: "239 E 5th St, New York, NY 10003", description: "Local chain.", host_id: 3, city_id: 8, max_attend: 3)
 Event.create(date: Faker::Date.forward(50), time: "11:40 AM", address: "187 Columbus Ave, New York, NY 10023", description: "Free-trade tea here.", host_id: 1, city_id: 8, max_attend: 1)
 Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "18 W 29th St, New York, NY 10001", description: "Thoughtfully sourced tea.", host_id: 3, city_id: 8, max_attend: 2)
@@ -88,8 +94,9 @@ Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "Fushimi 
 Event.create(date: Faker::Date.forward(50), time: "8:15 AM", address: "Shimogyo Ward, Higashiaburanokojicho, 552", description: "Great pastries.", host_id: 6, city_id: 2, max_attend: 5)
 Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: "Nishinokyo Shokushicho, ６７−３８", description: "Bring your own tea.", host_id: 6, city_id: 2, max_attend: 7)
 
-Event.create(date: Faker::Date.forward(50), time: "8:45 AM", address: "16a Cloisters Arcade,, 865 Hay St, Perth WA 6000, Australia", description: "Come relax with strangers.", host_id: 2, city_id: 1, max_attend: 4)
-Event.create(date: Faker::Date.forward(50), time: "11:40 AM", address: "16 Gordon St, West Perth WA 6005, Australia", description: "Great venue.", host_id: 2, city_id: 1, max_attend: 5)
-Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "172 St Georges Terrace, Perth WA 6000, Australia", description: "They have the best tea in town.", host_id: 2, city_id: 1, max_attend: 3)
-Event.create(date: Faker::Date.forward(50), time: "4:10 PM", address: "125 St Georges Terrace, Perth WA 6000, Australia", description: "Rain or shine!.", host_id: 1, city_id: 1, max_attend: 8)
-Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: " 90 King St, Perth WA 6000, Australia", description: "They make great sandwiches too!", host_id: 1, city_id: 1, max_attend: 6)
+
+
+Join.destroy_all
+
+Join.create(user_id: 2, event_id: 4)
+Join.create(user_id: 2, event_id: 5)
