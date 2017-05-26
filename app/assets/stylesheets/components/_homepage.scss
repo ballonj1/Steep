@@ -48,6 +48,7 @@
   justify-content: center;
   flex-direction: column;
   margin: 0 20px;
+  min-width: 400px;
 }
 
 .homepage-image {
@@ -70,4 +71,17 @@ p {
 
 h2 {
   font-weight: 600;
+}
+
+.homepage-hero {
+  margin: 0 auto;
+}
+
+.hero {
+  background-image: url("http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783765/vintage-mug-tea-photos-wood-texture_ynuvb5.jpg");
+  height: 600px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

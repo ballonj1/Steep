@@ -5,8 +5,8 @@ class Homepage extends React.Component {
   render(){
     return(
       <div className="homepage-container">
-        <div>
-            <img className="hero-image" src={"http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783765/vintage-mug-tea-photos-wood-texture_ynuvb5.jpg"} alt/>
+        <div className="homepage-hero">
+          <div className="hero"></div>
         </div>
         <div className="homepage-content">
           <div className="homepage-info-container">
