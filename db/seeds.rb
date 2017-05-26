@@ -94,9 +94,13 @@ Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "Fushimi 
 Event.create(date: Faker::Date.forward(50), time: "8:15 AM", address: "Shimogyo Ward, Higashiaburanokojicho, 552", description: "Great pastries.", host_id: 6, city_id: 2, max_attend: 5)
 Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: "Nishinokyo Shokushicho, ６７−３８", description: "Bring your own tea.", host_id: 6, city_id: 2, max_attend: 7)
 
-
-
 Join.destroy_all
 
 Join.create(user_id: 2, event_id: 4)
 Join.create(user_id: 2, event_id: 5)
+
+Host.destroy_all
+
+Host.create(user_id: 2, event_id: 1)
+Host.create(user_id: 2, event_id: 2)
+Host.create(user_id: 2, event_id: 3)

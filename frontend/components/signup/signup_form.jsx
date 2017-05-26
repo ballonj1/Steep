@@ -50,7 +50,7 @@ class signUpForm extends React.Component {
 
   demosignIn(e) {
     e.preventDefault();
-    const user = {user: {email: "email@gmail.com", password: "password"}}
+    const user = {user: {email: "email1@gmail.com", password: "password"}}
     this.props.signIn(user).then(() => this.props.history.push('/cities'));
   }
 
