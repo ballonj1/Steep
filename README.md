@@ -8,7 +8,7 @@ On the back-end, Steep uses Rails and PostgreSQL to manage and access the data t
 
 ## Application Features & Implementation
 
-###Home Page
+### Home Page
 The home page provides information to the user about why they should be using Steep.
 
 ![homepage](docs/wireframes/homepage.png)
