@@ -3,6 +3,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  width: 1100px;
 }
 
 .dashboard-index-1 {
@@ -10,7 +11,7 @@
   width: 90;
   border-bottom: 1px solid #DDD;
   padding: 20px 20px;
-  min-width: 890px;
+  width: 1100px;
 }
 
 .dashboard-info {
@@ -29,6 +30,7 @@
 .dashboard-text {
   flex: 1;
   font-size: 2em;
+  width: 222px;
 }
 
 .dashboard {
