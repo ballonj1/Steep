@@ -18,11 +18,11 @@ class CitiesIndex extends React.Component {
       <div className="cities-container">
         <div className="cities-header-1">
           <h1>Set your home city</h1>
-          <p>Make sure you're the first to her about Tea with Danger updates relevant to you.</p>
+          <p>Make sure you're the first to hear about Steep updates relevant to you.</p>
         </div>
         <div className="cities-header-2">
           <h2 className="cities-purpose">We're building our communities here.</h2>
-          <p>You should sign up for tea time today!</p>
+          <p>You should sign up for teatime today!</p>
         </div>
         <div className="cities-list">
           {cities.map((city) => {
