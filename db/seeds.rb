@@ -73,7 +73,7 @@ Event.create(date: Faker::Date.forward(50), time: "11:30 AM", address: "Grüners
 Event.create(date: Faker::Date.forward(50), time: "8:30 AM", address: "1-19-8 Dogenzaka, Shibuya-ku", description: "Trendy chain.", host_id: 1, city_id: 5, max_attend: 4)
 Event.create(date: Faker::Date.forward(50), time: "6:40 PM", address: "1-16-11 Tomigaya, Shibuya-ku", description: "Bakey cafe.", host_id: 1, city_id: 5, max_attend: 3)
 Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "5-17-5 Jingumae, Shibuya-ku", description: "Loose-leaf teas.", host_id: 3, city_id: 5, max_attend: 0)
-Event.create(date: Faker::Date.forward(50), time: "8:10 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and confortable.", host_id: 4, city_id: 5, max_attend: 0)
+Event.create(date: Faker::Date.forward(50), time: "8:10 AM", address: "3-1-4 Kiyosumi, Koto", description: "Funky and comfortable.", host_id: 4, city_id: 5, max_attend: 0)
 Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: "1-17-23 Meguro, Meguro-ku", description: "Intimate tea shop.", host_id: 5, city_id: 5, max_attend: 6)
 
 Event.create(date: Faker::Date.forward(50), time: "8:30 AM", address: "Klubbgata 3, 4013 Stavanger, Norway", description: "Upscale, light-filled cafe.", host_id: 13, city_id: 4, max_attend: 6)
@@ -85,8 +85,8 @@ Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: "Klubbgat
 Event.create(date: Faker::Date.forward(50), time: "8:30 AM", address: "Sestiere di S. Marco, 950, 30124 Venezia, Italy", description: "Hip, compact, and urban.", host_id: 13, city_id: 3, max_attend: 5)
 Event.create(date: Faker::Date.forward(50), time: "3:40 PM", address: "Piazza San Marco, 121, 30100 Venezia, Italy", description: "Vintage and classy.", host_id: 13, city_id: 3, max_attend: 6)
 Event.create(date: Faker::Date.forward(50), time: "10:30 AM", address: "Piazza San Marco, 133/134, Venezia, Italy", description: "Industrial decor with fast-moving baristas at the core.", host_id: 11, city_id: 3, max_attend: 0)
-Event.create(date: Faker::Date.forward(50), time: "8:10 AM", address: "Sestiere Cannaregio, 1337, 30121 Venezia, Italy", description: "Funky and confortable.", host_id: 11, city_id: 3, max_attend: 6)
-Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: "Venezia Rialto, Calle dei Cinque, San Polo, 609, 30100 Venezia, Italy", description: "Friendly and open, but deadly serious about tea.", host_id: 11, city_id: 3, max_attend: 2)
+Event.create(date: Faker::Date.forward(50), time: "8:10 AM", address: "Sestiere Cannaregio, 1337, 30121 Venezia, Italy", description: "World-class tea.", host_id: 11, city_id: 3, max_attend: 6)
+Event.create(date: Faker::Date.forward(50), time: "12:30 PM", address: "Venezia Rialto, Calle dei Cinque, San Polo, 609, 30100 Venezia, Italy", description: "Friendly and open, but serious about tea.", host_id: 11, city_id: 3, max_attend: 2)
 
 Event.create(date: Faker::Date.forward(50), time: "8:30 AM", address: "Higashiyama Ward, Yasaka Kamimachi, ３６８", description: "Free wi-fi!", host_id: 7, city_id: 2, max_attend: 6)
 Event.create(date: Faker::Date.forward(50), time: "7:40 AM", address: "Sakyo Ward, Yoshidahonmachi, ３６−１", description: "Coffee & Tea", host_id: 7, city_id: 2, max_attend: 4)
