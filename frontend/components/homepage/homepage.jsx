@@ -12,7 +12,7 @@ class Homepage extends React.Component {
           <div className="homepage-info-container">
             <div className="homepage-info">
               <div className="homepage-info-1">
-                <h2>Show up for tea time</h2>
+                <h2>Show up for teatime</h2>
                 <p>You and a few others join a host at a cafe</p>
               </div>
               <div className="homepage-info-1">
@@ -32,7 +32,7 @@ class Homepage extends React.Component {
               <div className="homepage-blurb">
                 <h2>It's weird.</h2>
                 <p>
-                  Everyone at tea time is stepping a little out of their comfort zone. This makes it so much easier to actually learn something unexpected about the people around you. Because open minds are a prerequisite around here.
+                  Everyone at teatime is stepping a little out of their comfort zone. This makes it so much easier to actually learn something unexpected about the people around you. Because open minds are a prerequisite around here.
                 </p>
               </div>
             </div>
@@ -50,7 +50,7 @@ class Homepage extends React.Component {
               <div className="homepage-blurb">
                 <h2>Your hands are made for high fiving!</h2>
                 <p>
-                  And your eyes are made…for eye contact! Real humans are so much cooler than their tweets or Instagram pictures. Tea time has real humans! #nofilter!
+                  And your eyes are made…for eye contact! Real humans are so much cooler than their tweets or Instagram pictures. Teatime has real humans! #nofilter!
                 </p>
               </div>
             </div>
