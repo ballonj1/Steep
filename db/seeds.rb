@@ -34,14 +34,14 @@ User.create(first_name: "David", last_name: "Wong", email: "email21@gmail.com", 
 
 City.destroy_all
 
-City.create(name: "Perth", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495302501/image.adapt.1663.medium_as661s.jpg")
-City.create(name: "Kyoto", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495173344/kyoto-best-lake-ever_xhcxgq.jpg")
-City.create(name: "Venice", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495173247/venice-italy_qyqrhm.jpg")
-City.create(name: "Stavanger", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495173178/stavanger_da9l8h.jpg")
-City.create(name: "Tokyo", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495232733/places.tokyo_sr38ni.jpg")
-City.create(name: "Oslo", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495301816/oslo_uebdio.jpg")
-City.create(name: "San Francisco", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495172076/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco_egcxtn.jpg")
-City.create(name: "New York", image_url: "http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495172034/5104226627001_5244714388001_5205235439001-vs_ywumkw.jpg")
+City.create(name: "Perth", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495302501/image.adapt.1663.medium_as661s.jpg")
+City.create(name: "Kyoto", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495173344/kyoto-best-lake-ever_xhcxgq.jpg")
+City.create(name: "Venice", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495173247/venice-italy_qyqrhm.jpg")
+City.create(name: "Stavanger", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495173178/stavanger_da9l8h.jpg")
+City.create(name: "Tokyo", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495232733/places.tokyo_sr38ni.jpg")
+City.create(name: "Oslo", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495301816/oslo_uebdio.jpg")
+City.create(name: "San Francisco", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495172076/9cf024dfd5c0bcb2b17f4785340145ea-san-francisco_egcxtn.jpg")
+City.create(name: "New York", image_url: "https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495172034/5104226627001_5244714388001_5205235439001-vs_ywumkw.jpg")
 
 
 Event.destroy_all

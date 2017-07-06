@@ -28,7 +28,7 @@ class Homepage extends React.Component {
           <div className="homepage-body">
             <h3 className="homepage-why">SO WHY ARE THOUSANDS OF PEOPLE DOING IT?</h3>
             <div className="homepage-entry">
-              <img className="homepage-image" src={"http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783182/2_ypgkbm.png"} alt="cartoon-figures" />
+              <img className="homepage-image" src={"https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783182/2_ypgkbm.png"} alt="cartoon-figures" />
               <div className="homepage-blurb">
                 <h2>It's weird.</h2>
                 <p>
@@ -43,10 +43,10 @@ class Homepage extends React.Component {
                   In all likelihood, our paths won’t cross for any reason. So often, we only meet people through work, school, or friends of friends. And even then, it’s questionable. So basically, we manufacture serendipity. 
                 </p>
               </div>
-              <img className="homepage-image" src={"http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783169/5_juwqyv.png"} alt="cartoon-figures" />
+              <img className="homepage-image" src={"https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783169/5_juwqyv.png"} alt="cartoon-figures" />
             </div>
             <div className="homepage-entry">
-              <img className="homepage-image" src={"http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783175/4_s59fp1.png"} alt="cartoon-figures" />
+              <img className="homepage-image" src={"https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783175/4_s59fp1.png"} alt="cartoon-figures" />
               <div className="homepage-blurb">
                 <h2>Your hands are made for high fiving!</h2>
                 <p>

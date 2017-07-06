@@ -17,7 +17,7 @@ const signedInNav = (signOut, signedIn, session, fetchEvents, history) => {
       <header className="main-nav">
         <nav className="left-nav">
           <div className="left-nav-content">
-            <Link className="logo-container" to="/"><img className="logo" src="http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783162/logo_oq2pw0.png" alt="TWD" /></Link>
+            <Link className="logo-container" to="/"><img className="logo" src="https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783162/logo_oq2pw0.png" alt="TWD" /></Link>
           </div>
         </nav>
         <nav className="right-nav">
@@ -43,7 +43,7 @@ const signedOutNav = (signedIn, session) => {
       <header className="main-nav">
         <nav className="left-nav">
           <div className="left-nav-content">
-            <Link to="/"><img src="http://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783162/logo_oq2pw0.png" alt="TWD" /></Link>
+            <Link to="/"><img src="https://res.cloudinary.com/dzbwfwz4j/image/upload/v1495783162/logo_oq2pw0.png" alt="TWD" /></Link>
           </div>
         </nav>
         <nav className="right-nav">
