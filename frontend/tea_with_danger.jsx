@@ -27,17 +27,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('root');
   ReactDom.render(<Root store={store} />, root);
 });
-
-window.deleteEvent = deleteEvent;
-window.fetchHosts = fetchHosts;
-window.fetchJoins = fetchJoins;
-window.createHost = createHost;
-window.createEvent = createEvent;
-window.updateEvent = updateEvent;
-window.updateUserCity = updateUserCity;
-window.updateUser = updateUser;
-window.fetchHost = fetchHost;
-window.leaveEvent = leaveEvent;
-window.joinEvent = joinEvent;
-window.fetchCity = fetchCity;
-window.fetchCities = fetchCities;
