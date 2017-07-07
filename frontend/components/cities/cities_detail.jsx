@@ -32,6 +32,7 @@ class CitiesDetail extends React.Component {
 
   render(){
     const { cities } = this.props;
+    console.log(this.props);
     // const city = cities.filter((city) => {
     //   return city.id === parseInt(this.props.match.params.id);
     // });

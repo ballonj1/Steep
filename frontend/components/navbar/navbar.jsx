@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Route, Link, withRouter } from 'react-router-dom';
 
 
-const signedInNav = (signOut, signedIn, session, fetchEvents, history) => {
+const signedInNav = (signOut, signedIn, session, fetchEvents, history, fetchCity) => {
 
   const handleSignOut = (e) => {
     return e => {
@@ -62,8 +62,8 @@ const signedOutNav = (signedIn, session) => {
   }
 }
 
-const Navbar = ({ signedIn, signOut, session, fetchEvents, history }) => (
-  (signedIn) ? signedInNav(signOut, signedIn, session, fetchEvents, history) : signedOutNav(signedIn, session)
+const Navbar = ({ signedIn, signOut, session, fetchEvents, history, fetchCity }) => (
+  (signedIn) ? signedInNav(signOut, signedIn, session, fetchEvents, history, fetchCity) : signedOutNav(signedIn, session)
 )
 
 export const NavbarWithRouter = withRouter(Navbar);

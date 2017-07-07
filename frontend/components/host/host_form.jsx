@@ -18,11 +18,11 @@ class HostForm extends React.Component {
   }
 
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn) {
-      this.props.history.push('/');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (nextProps.errors) {
+  //     this.props.history.push('/');
+  //   }
+  // }
 
   update(field){
     return e => {
@@ -42,6 +42,18 @@ class HostForm extends React.Component {
     e.preventDefault();
     const event = this.state;
     this.props.createEvent({event}).then(this.props.history.push(`/cities/${this.props.match.params.id}`));
+  }
+
+  renderErrors() {
+    return(
+      <ul>
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            <div className={'errors'}>{error}</div>
+          </li>
+        ))}
+      </ul>
+    )
   }
 
   render() {

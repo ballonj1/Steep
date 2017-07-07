@@ -54,6 +54,10 @@ class signUpForm extends React.Component {
     this.props.signIn(user).then(() => this.props.history.push('/cities'));
   }
 
+  componentWillUnmount() {
+    this.props.receiveErrors([""]);
+  }
+
   render() {
     return(
       <div className="sign-up-form-container">
@@ -62,7 +66,7 @@ class signUpForm extends React.Component {
           <p className="sign-up-text">Thousands of strangers across the world have sat
               together for conversations. We can't wait for you to join them.</p>
           <br/>
-          <div className="errors">{this.renderErrors()}</div>
+          {this.renderErrors()}
           <div className="sign-up-form">
               <input type="text"
                 value={this.state.first_name}

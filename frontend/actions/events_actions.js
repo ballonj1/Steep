@@ -44,7 +44,8 @@ export const fetchEvents = (city_id) => (dispatch) => (
 
 export const createEvent = ({ event }) => (dispatch) => (
   APIUtil.createEvent({ event })
-    .then((event) => dispatch(receiveEvent(event)))
+    .then((event) => dispatch(receiveEvent(event)),
+                  (errors) => dispatch(receiveErrors(errors)))
 )
 
 export const updateEvent = (event_id, current_attend) => (dispatch) => (

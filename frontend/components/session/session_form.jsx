@@ -12,11 +12,6 @@ class SessionForm extends React.Component {
     this.demosignIn = this.demosignIn.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.signedIn) {
-      // this.props.history.push('/cities');
-    }
-  }
 
   update(field){
     return e => this.setState({
@@ -61,7 +56,6 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return(
       <div className="sign-in-form-container">
         <form onSubmit={this.handleSubmit} className="sign-in-form-box">

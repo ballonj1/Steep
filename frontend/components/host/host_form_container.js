@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 import { createEvent } from '../../actions/events_actions';
 import HostForm from './host_form.jsx';
 
-const mapStateToProps = ({ session }) => ({
-  currentUser: session.currentUser
+const mapStateToProps = ({ session, events }) => ({
+  currentUser: session.currentUser,
+  errors: events.errors
 });
 
 const mapDispatchToProps = (dispatch) => ({
