@@ -62,7 +62,7 @@ class signUpForm extends React.Component {
           <p className="sign-up-text">Thousands of strangers across the world have sat
               together for conversations. We can't wait for you to join them.</p>
           <br/>
-          {this.renderErrors()}
+          <div className="errors">{this.renderErrors()}</div>
           <div className="sign-up-form">
               <input type="text"
                 value={this.state.first_name}

@@ -49,14 +49,19 @@ class SessionForm extends React.Component {
       <ul>
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
-            {error}
+            <div className="errors">{error}</div>
           </li>
         ))}
       </ul>
     )
   };
 
+  componentWillUnmount() {
+    this.props.receiveErrors([""]);
+  }
+
   render() {
+    console.log(this.props)
     return(
       <div className="sign-in-form-container">
         <form onSubmit={this.handleSubmit} className="sign-in-form-box">
