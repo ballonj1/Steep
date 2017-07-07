@@ -32,14 +32,6 @@ class CitiesDetail extends React.Component {
 
   render(){
     const { cities } = this.props;
-    console.log(this.props);
-    // const city = cities.filter((city) => {
-    //   return city.id === parseInt(this.props.match.params.id);
-    // });
-    // const cityId = city.length > 0 ? city[0].id : "";
-    // const image_url = city.length > 0 ? city[0].image_url : "";
-    // const city_name = city.length > 0 ? city[0].name : "";
-
     const button = this.buttonRender();
     return(
       <div className="city-detail-container">
