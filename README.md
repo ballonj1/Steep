@@ -1,5 +1,5 @@
 # Steep
-[Live](https://steepwithstrangers.herokuapp.com/)
+[Live](www.steepwithstrangers.com/)
 
 Steep is a web application inspired by Tea With Strangers.  Steep allows users to meet for tea/coffee in a number of cities around the world at a time and date that works for them.
 
